@@ -3,10 +3,10 @@ package com.example.android.golfscoreapp;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 
 public class MainActivity extends AppCompatActivity {
 
+    public String phase = "initial";
     public int hole = 1;
 
     // Save off key global variables on saveInstanceState
@@ -16,10 +16,11 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("hole" , hole);
     }
 
+    //onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_portrait);
+        setContentView(R.layout.initial_layout_portrait);
         rebuildState(savedInstanceState);  //Rebuild vars on a state change
     }
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //onConfigurationChanged
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -40,9 +42,13 @@ public class MainActivity extends AppCompatActivity {
     public void changeLayoutBasedOnOrientation (Configuration newConfig) {
         //Portrait orientation
         if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.activity_main_portrait);
+            if (phase.equals("inital")) {
+                setContentView(R.layout.initial_layout_portrait);
+            }
         } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.activity_main_landscape);
+            if (phase.equals("inital")) {
+                setContentView(R.layout.initial_layout_landscape);
+            }
         }
     }
 
