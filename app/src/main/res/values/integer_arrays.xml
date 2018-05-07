@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array
+        name="castle_par">
+        <item>0</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+        <item>5</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array
+        name="castle_distance_white">
+        <item>0</item>
+        <item>346</item>
+        <item>404</item>
+        <item>202</item>
+        <item>540</item>
+        <item>536</item>
+        <item>421</item>
+        <item>456</item>
+        <item>141</item>
+        <item>381</item>
+        <item>167</item>
+        <item>402</item>
+        <item>454</item>
+        <item>179</item>
+        <item>400</item>
+        <item>585</item>
+        <item>406</item>
+        <item>184</item>
+        <item>555</item>
+    </integer-array>
+
+    <integer-array
+        name="castle_distance_yellow">
+        <item>0</item>
+        <item>337</item>
+        <item>394</item>
+        <item>179</item>
+        <item>518</item>
+        <item>500</item>
+        <item>399</item>
+        <item>429</item>
+        <item>129</item>
+        <item>351</item>
+        <item>154</item>
+        <item>385</item>
+        <item>415</item>
+        <item>154</item>
+        <item>376</item>
+        <item>555</item>
+        <item>390</item>
+        <item>174</item>
+        <item>533</item>
+    </integer-array>
+
+    <integer-array
+        name="castle_distance_red">
+        <item>0</item>
+        <item>300</item>
+        <item>344</item>
+        <item>145</item>
+        <item>476</item>
+        <item>446</item>
+        <item>355</item>
+        <item>341</item>
+        <item>122</item>
+        <item>314</item>
+        <item>130</item>
+        <item>289</item>
+        <item>340</item>
+        <item>119</item>
+        <item>312</item>
+        <item>509</item>
+        <item>346</item>
+        <item>142</item>
+        <item>430</item>
+    </integer-array>
+
+</resources>
