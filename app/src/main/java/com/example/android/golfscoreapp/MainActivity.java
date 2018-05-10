@@ -4,6 +4,8 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,9 +13,12 @@ public class MainActivity extends AppCompatActivity {
     public String phase = "initial";
     public int hole = 1;
     public String course;
+    public int playerCount = 1;
 
     //Global object variables
-    public View coursesViewGroup;
+    public LinearLayout coursesViewGroup;
+    public LinearLayout playerCountViewGroup;
+    public TextView playerCountView;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -22,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("hole" , hole);
         outState.putString("phase" , phase);
         outState.putString("course" , course);
+        outState.putInt("playerCount" , playerCount);
     }
 
     //onCreate
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             hole = savedInstanceState.getInt("hole", hole);
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
+            playerCount = savedInstanceState.getInt("playerCount", playerCount);
         }
     }
 
@@ -65,12 +72,30 @@ public class MainActivity extends AppCompatActivity {
 
     public void buildInitialObjects () {
         coursesViewGroup=findViewById(R.id.course_selection_view_group);
+        playerCountViewGroup=findViewById(R.id.player_count_view_group);
+        playerCountView=findViewById(R.id.player_count_view);
+        playerCountView.setText(String.valueOf(playerCount));
     }
 
     //On click method executed when St. Andrews Castle Course is selected.
     public void setCourseSACastle (View view) {
         course="castle";
         coursesViewGroup.setVisibility(View.GONE);
+        playerCountViewGroup.setVisibility(View.VISIBLE);
+    }
+
+    public void incrementPlayers (View view) {
+        if (playerCount < 4) {
+            playerCount = playerCount + 1;
+            playerCountView.setText(String.valueOf(playerCount));
+        }
+    }
+
+    public void decrementPlayers (View view) {
+        if (playerCount > 1) {
+            playerCount = playerCount - 1;
+            playerCountView.setText(String.valueOf(playerCount));
+        }
     }
 
 }

@@ -14,10 +14,63 @@
         android:src="@drawable/initial_layout_background"/>
 
     <TextView
+        android:id="@+id/initial_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/header"
         android:text="@string/initial_header"/>
+
+    <LinearLayout
+        android:id="@+id/player_count_view_group"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/initial_header"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:background="@drawable/text_view_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="@string/player_count"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/player_increment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            style="@style/button"
+            android:text="@string/increment"
+            android:onClick="incrementPlayers"/>
+
+        <TextView
+            android:id="@+id/player_count_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/player_decrement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            style="@style/button"
+            android:text="@string/decrement"
+            android:onClick="decrementPlayers"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/course_selection_view_group"
