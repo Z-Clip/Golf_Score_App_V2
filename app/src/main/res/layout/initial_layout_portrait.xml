@@ -13,4 +13,32 @@
         android:scaleType="centerCrop"
         android:src="@drawable/initial_layout_background"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/header"
+        android:text="@string/initial_header"/>
+
+    <LinearLayout
+        android:id="@+id/course_selection_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:background="@drawable/st_andrew_button_background"
+            android:textColor="@color/white"
+            android:text="@string/sa_castle"
+            android:drawableLeft="@drawable/st_andrews_logo"
+            android:drawableStart="@drawable/st_andrews_logo"
+            android:onClick="setCourseSACastle"/>
+
+    </LinearLayout>
+
+
+
 </RelativeLayout>

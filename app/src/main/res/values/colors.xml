@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#76FF03</color>
-    <color name="colorPrimaryDark">#1B5E20</color>
-    <color name="colorAccent">#00E676</color>
+
+    <!-- Main colors. Fully opaque. -->
+    <color name="colorPrimary">#388e3c</color>
+    <color name="colorPrimaryDark">#00600f</color>
+    <color name="colorAccent">#cfff94</color>
+    <color name="colorAccentDark">#6b9b36</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Transparent variants. 50% -->
+    <color name="colorPrimaryTransparent">#80388e3c</color>
+    <color name="colorPrimaryDarkTransparent">#8000600f</color>
+    <color name="colorAccentTransparent">#80cfff94</color>
+    <color name="colorAccentDarkTransparent">#806b9b36</color>
+    <color name="blackTransparent">#80000000</color>
+    <color name="whiteTransparent">#80FFFFFF</color>
 </resources>

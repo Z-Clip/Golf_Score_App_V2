@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Golf Score App</string>
+    <string name="initial_header">Scorecard</string>
+    <string name="sa_castle">St. Andrews Links - Castle Course</string>
 </resources>
