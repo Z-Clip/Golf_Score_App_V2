@@ -1,96 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Par arrays -->
     <integer-array
-        name="castle_par">
-        <item>0</item>
-        <item>4</item>
-        <item>4</item>
-        <item>3</item>
-        <item>5</item>
-        <item>5</item>
-        <item>4</item>
-        <item>4</item>
-        <item>3</item>
-        <item>4</item>
-        <item>3</item>
-        <item>4</item>
-        <item>4</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>4</item>
-        <item>3</item>
-        <item>5</item>
+        name="sa_old_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>4</item> <!-- 3 -->
+        <item>4</item> <!-- 4 -->
+        <item>5</item> <!-- 5 -->
+        <item>4</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>3</item> <!-- 8 -->
+        <item>4</item> <!-- 9 -->
+        <item>4</item> <!-- 10 -->
+        <item>3</item> <!-- 11 -->
+        <item>4</item> <!-- 12 -->
+        <item>4</item> <!-- 13 -->
+        <item>5</item> <!-- 14 -->
+        <item>4</item> <!-- 15 -->
+        <item>4</item> <!-- 16 -->
+        <item>4</item> <!-- 17 -->
+        <item>4</item> <!-- 18 -->
     </integer-array>
 
     <integer-array
-        name="castle_distance_white">
-        <item>0</item>
-        <item>346</item>
-        <item>404</item>
-        <item>202</item>
-        <item>540</item>
-        <item>536</item>
-        <item>421</item>
-        <item>456</item>
-        <item>141</item>
-        <item>381</item>
-        <item>167</item>
-        <item>402</item>
-        <item>454</item>
-        <item>179</item>
-        <item>400</item>
-        <item>585</item>
-        <item>406</item>
-        <item>184</item>
-        <item>555</item>
+        name="sa_castle_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>3</item> <!-- 3 -->
+        <item>5</item> <!-- 4 -->
+        <item>5</item> <!-- 5 -->
+        <item>4</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>3</item> <!-- 8 -->
+        <item>4</item> <!-- 9 -->
+        <item>3</item> <!-- 10 -->
+        <item>4</item> <!-- 11 -->
+        <item>4</item> <!-- 12 -->
+        <item>3</item> <!-- 13 -->
+        <item>4</item> <!-- 14 -->
+        <item>5</item> <!-- 15 -->
+        <item>4</item> <!-- 16 -->
+        <item>3</item> <!-- 17 -->
+        <item>5</item> <!-- 18 -->
     </integer-array>
 
     <integer-array
-        name="castle_distance_yellow">
-        <item>0</item>
-        <item>337</item>
-        <item>394</item>
-        <item>179</item>
-        <item>518</item>
-        <item>500</item>
-        <item>399</item>
-        <item>429</item>
-        <item>129</item>
-        <item>351</item>
-        <item>154</item>
-        <item>385</item>
-        <item>415</item>
-        <item>154</item>
-        <item>376</item>
-        <item>555</item>
-        <item>390</item>
-        <item>174</item>
-        <item>533</item>
+        name="sa_new_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>5</item> <!-- 3 -->
+        <item>4</item> <!-- 4 -->
+        <item>3</item> <!-- 5 -->
+        <item>4</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>5</item> <!-- 8 -->
+        <item>3</item> <!-- 9 -->
+        <item>4</item> <!-- 10 -->
+        <item>4</item> <!-- 11 -->
+        <item>5</item> <!-- 12 -->
+        <item>3</item> <!-- 13 -->
+        <item>4</item> <!-- 14 -->
+        <item>4</item> <!-- 15 -->
+        <item>4</item> <!-- 16 -->
+        <item>3</item> <!-- 17 -->
+        <item>4</item> <!-- 18 -->
     </integer-array>
 
     <integer-array
-        name="castle_distance_red">
+        name="sa_jubilee_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>5</item> <!-- 3 -->
+        <item>4</item> <!-- 4 -->
+        <item>3</item> <!-- 5 -->
+        <item>5</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>4</item> <!-- 8 -->
+        <item>3</item> <!-- 9 -->
+        <item>4</item> <!-- 10 -->
+        <item>5</item> <!-- 11 -->
+        <item>5</item> <!-- 12 -->
+        <item>3</item> <!-- 13 -->
+        <item>4</item> <!-- 14 -->
+        <item>4</item> <!-- 15 -->
+        <item>4</item> <!-- 16 -->
+        <item>3</item> <!-- 17 -->
+        <item>4</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_edan_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>4</item> <!-- 3 -->
+        <item>4</item> <!-- 4 -->
+        <item>3</item> <!-- 5 -->
+        <item>4</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>3</item> <!-- 8 -->
+        <item>5</item> <!-- 9 -->
+        <item>3</item> <!-- 10 -->
+        <item>4</item> <!-- 11 -->
+        <item>4</item> <!-- 12 -->
+        <item>4</item> <!-- 13 -->
+        <item>4</item> <!-- 14 -->
+        <item>3</item> <!-- 15 -->
+        <item>5</item> <!-- 16 -->
+        <item>4</item> <!-- 17 -->
+        <item>4</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_strathtyrum_par">
+        <item>18</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>3</item> <!-- 3 -->
+        <item>4</item> <!-- 4 -->
+        <item>5</item> <!-- 5 -->
+        <item>3</item> <!-- 6 -->
+        <item>4</item> <!-- 7 -->
+        <item>3</item> <!-- 8 -->
+        <item>4</item> <!-- 9 -->
+        <item>4</item> <!-- 10 -->
+        <item>5</item> <!-- 11 -->
+        <item>4</item> <!-- 12 -->
+        <item>3</item> <!-- 13 -->
+        <item>4</item> <!-- 14 -->
+        <item>4</item> <!-- 15 -->
+        <item>3</item> <!-- 16 -->
+        <item>4</item> <!-- 17 -->
+        <item>4</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_balgove_par">
+        <item>9</item> <!-- Hole count -->
+        <item>4</item> <!-- 1 -->
+        <item>4</item> <!-- 2 -->
+        <item>3</item> <!-- 3 -->
+        <item>3</item> <!-- 4 -->
+        <item>3</item> <!-- 5 -->
+        <item>4</item> <!-- 6 -->
+        <item>3</item> <!-- 7 -->
+        <item>3</item> <!-- 8 -->
+        <item>3</item> <!-- 9 -->
+    </integer-array>
+
+
+    <!-- Distance Arrays -->
+    <integer-array
+        name="sa_castle_distance_White">
         <item>0</item>
-        <item>300</item>
-        <item>344</item>
-        <item>145</item>
-        <item>476</item>
-        <item>446</item>
-        <item>355</item>
-        <item>341</item>
-        <item>122</item>
-        <item>314</item>
-        <item>130</item>
-        <item>289</item>
-        <item>340</item>
-        <item>119</item>
-        <item>312</item>
-        <item>509</item>
-        <item>346</item>
-        <item>142</item>
-        <item>430</item>
+        <item>346</item> <!-- 1 -->
+        <item>404</item> <!-- 2 -->
+        <item>202</item> <!-- 3 -->
+        <item>540</item> <!-- 4 -->
+        <item>536</item> <!-- 5 -->
+        <item>421</item> <!-- 6 -->
+        <item>456</item> <!-- 7 -->
+        <item>141</item> <!-- 8 -->
+        <item>381</item> <!-- 9 -->
+        <item>167</item> <!-- 10 -->
+        <item>402</item> <!-- 11 -->
+        <item>454</item> <!-- 12 -->
+        <item>179</item> <!-- 13 -->
+        <item>400</item> <!-- 14 -->
+        <item>585</item> <!-- 15 -->
+        <item>406</item> <!-- 16 -->
+        <item>184</item> <!-- 17 -->
+        <item>555</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_castle_distance_Yellow">
+        <item>0</item>
+        <item>337</item> <!-- 1 -->
+        <item>394</item> <!-- 2 -->
+        <item>179</item> <!-- 3 -->
+        <item>518</item> <!-- 4 -->
+        <item>500</item> <!-- 5 -->
+        <item>399</item> <!-- 6 -->
+        <item>429</item> <!-- 7 -->
+        <item>129</item> <!-- 8 -->
+        <item>351</item> <!-- 9 -->
+        <item>154</item> <!-- 10 -->
+        <item>385</item> <!-- 11 -->
+        <item>415</item> <!-- 12 -->
+        <item>154</item> <!-- 13 -->
+        <item>376</item> <!-- 14 -->
+        <item>555</item> <!-- 15 -->
+        <item>390</item> <!-- 16 -->
+        <item>174</item> <!-- 17 -->
+        <item>533</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_castle_distance_Red">
+        <item>0</item>
+        <item>300</item> <!-- 1 -->
+        <item>344</item> <!-- 2 -->
+        <item>145</item> <!-- 3 -->
+        <item>476</item> <!-- 4 -->
+        <item>446</item> <!-- 5 -->
+        <item>355</item> <!-- 6 -->
+        <item>341</item> <!-- 7 -->
+        <item>122</item> <!-- 8 -->
+        <item>314</item> <!-- 9 -->
+        <item>130</item> <!-- 10 -->
+        <item>289</item> <!-- 11 -->
+        <item>340</item> <!-- 12 -->
+        <item>119</item> <!-- 13 -->
+        <item>312</item> <!-- 14 -->
+        <item>509</item> <!-- 15 -->
+        <item>346</item> <!-- 16 -->
+        <item>142</item> <!-- 17 -->
+        <item>430</item> <!-- 18 -->
     </integer-array>
 
 </resources>

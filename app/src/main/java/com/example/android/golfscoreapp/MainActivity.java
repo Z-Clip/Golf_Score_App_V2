@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public int playerCount = 1;
 
     //Global object variables
-    public LinearLayout coursesViewGroup;
+    public ScrollView coursesViewGroup;
     public LinearLayout playerCountViewGroup;
     public TextView playerCountView;
 
@@ -42,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
     //Rebuild key global variables on a state change
     public void rebuildState(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
-            hole = savedInstanceState.getInt("hole", hole);
+            hole = savedInstanceState.getInt("hole" , hole);
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
-            playerCount = savedInstanceState.getInt("playerCount", playerCount);
+            playerCount = savedInstanceState.getInt("playerCount" , playerCount);
         }
     }
 
@@ -77,9 +78,8 @@ public class MainActivity extends AppCompatActivity {
         playerCountView.setText(String.valueOf(playerCount));
     }
 
-    //On click method executed when St. Andrews Castle Course is selected.
-    public void setCourseSACastle (View view) {
-        course="castle";
+    //On click method executed when a course is selected. Sets visibilities of views.
+    public void afterCourseSelection () {
         coursesViewGroup.setVisibility(View.GONE);
         playerCountViewGroup.setVisibility(View.VISIBLE);
     }
@@ -96,6 +96,48 @@ public class MainActivity extends AppCompatActivity {
             playerCount = playerCount - 1;
             playerCountView.setText(String.valueOf(playerCount));
         }
+    }
+
+    //On click method executed when St. Andrews Old Course is selected.
+    public void setCourseSAOld (View view) {
+        course="old";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews Castle Course is selected.
+    public void setCourseSACastle (View view) {
+        course="castle";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews New Course is selected.
+    public void setCourseSANew (View view) {
+        course="new";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews Jubilee Course is selected.
+    public void setCourseSAJubilee (View view) {
+        course="jubilee";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews Edan Course is selected.
+    public void setCourseSAEdan (View view) {
+        course="edan";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews Strathtyrum Course is selected.
+    public void setCourseSAStrathtyrum (View view) {
+        course="strathtyrum";
+        afterCourseSelection();
+    }
+
+    //On click method executed when St. Andrews Balgove Course is selected.
+    public void setCourseSABalgove (View view) {
+        course="balgove";
+        afterCourseSelection();
     }
 
 }
