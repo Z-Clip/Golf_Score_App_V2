@@ -432,4 +432,73 @@
         <item>372</item> <!-- 18 -->
     </integer-array>
 
+    <integer-array
+        name="sa_eden_distance_White">
+        <item>0</item>
+        <item>326</item> <!-- 1 -->
+        <item>449</item> <!-- 2 -->
+        <item>417</item> <!-- 3 -->
+        <item>273</item> <!-- 4 -->
+        <item>144</item> <!-- 5 -->
+        <item>407</item> <!-- 6 -->
+        <item>346</item> <!-- 7 -->
+        <item>178</item> <!-- 8 -->
+        <item>505</item> <!-- 9 -->
+        <item>196</item> <!-- 10 -->
+        <item>375</item> <!-- 11 -->
+        <item>341</item> <!-- 12 -->
+        <item>422</item> <!-- 13 -->
+        <item>350</item> <!-- 14 -->
+        <item>170</item> <!-- 15 -->
+        <item>568</item> <!-- 16 -->
+        <item>432</item> <!-- 17 -->
+        <item>351</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_eden_distance_Yellow">
+        <item>0</item>
+        <item>301</item> <!-- 1 -->
+        <item>438</item> <!-- 2 -->
+        <item>402</item> <!-- 3 -->
+        <item>251</item> <!-- 4 -->
+        <item>125</item> <!-- 5 -->
+        <item>376</item> <!-- 6 -->
+        <item>307</item> <!-- 7 -->
+        <item>155</item> <!-- 8 -->
+        <item>484</item> <!-- 9 -->
+        <item>187</item> <!-- 10 -->
+        <item>364</item> <!-- 11 -->
+        <item>326</item> <!-- 12 -->
+        <item>404</item> <!-- 13 -->
+        <item>334</item> <!-- 14 -->
+        <item>151</item> <!-- 15 -->
+        <item>523</item> <!-- 16 -->
+        <item>407</item> <!-- 17 -->
+        <item>334</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_eden_distance_Red">
+        <item>0</item>
+        <item>270</item> <!-- 1 -->
+        <item>438</item> <!-- 2 -->
+        <item>402</item> <!-- 3 -->
+        <item>240</item> <!-- 4 -->
+        <item>119</item> <!-- 5 -->
+        <item>371</item> <!-- 6 -->
+        <item>291</item> <!-- 7 -->
+        <item>139</item> <!-- 8 -->
+        <item>466</item> <!-- 9 -->
+        <item>148</item> <!-- 10 -->
+        <item>327</item> <!-- 11 -->
+        <item>283</item> <!-- 12 -->
+        <item>404</item> <!-- 13 -->
+        <item>316</item> <!-- 14 -->
+        <item>108</item> <!-- 15 -->
+        <item>433</item> <!-- 16 -->
+        <item>378</item> <!-- 17 -->
+        <item>317</item> <!-- 18 -->
+    </integer-array>
+
 </resources>

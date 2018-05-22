@@ -116,8 +116,8 @@
                 style="@style/st_andrews_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sa_edan"
-                android:onClick="setCourseSAEdan"/>
+                android:text="@string/sa_eden"
+                android:onClick="setCourseSAEden"/>
 
             <Button
                 style="@style/st_andrews_button"

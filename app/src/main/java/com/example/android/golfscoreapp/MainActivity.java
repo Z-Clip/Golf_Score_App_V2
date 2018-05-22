@@ -123,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //On click method executed when St. Andrews Edan Course is selected.
-    public void setCourseSAEdan (View view) {
-        course="sa_edan";
+    public void setCourseSAEden (View view) {
+        course="sa_eden";
         afterCourseSelection();
     }
 
