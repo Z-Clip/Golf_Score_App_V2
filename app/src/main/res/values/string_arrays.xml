@@ -73,4 +73,26 @@
         <item>Hole 18</item> <!-- 18 -->
     </string-array>
 
+    <string-array name="sa_jubilee_hole_names">
+        <item></item>
+        <item>Willie Auchterlonie</item> <!-- 1 -->
+        <item>Whinny Knowe</item> <!-- 2 -->
+        <item>The Skelp</item> <!-- 3 -->
+        <item>Crossgate</item> <!-- 4 -->
+        <item>Hackie's Barra'</item> <!-- 5 -->
+        <item>Playfair</item> <!-- 6 -->
+        <item>Ayton</item> <!-- 7 -->
+        <item>Eden's Edge</item> <!-- 8 -->
+        <item>Windy Tap</item> <!-- 9 -->
+        <item>Spires</item> <!-- 10 -->
+        <item>Treble-One</item> <!-- 11 -->
+        <item>The Butts</item> <!-- 12 -->
+        <item>Hale Bopp</item> <!-- 13 -->
+        <item>Willie Whitelaw</item> <!-- 14 -->
+        <item>Steel's Gem</item> <!-- 15 -->
+        <item>Freddie Tait</item> <!-- 16 -->
+        <item>Ladyhead</item> <!-- 17 -->
+        <item>Honeyman's Howe</item> <!-- 18 -->
+    </string-array>
+
 </resources>

@@ -363,4 +363,73 @@
         <item>386</item> <!-- 18 -->
     </integer-array>
 
+    <integer-array
+        name="sa_jubilee_distance_White">
+        <item>0</item>
+        <item>367</item> <!-- 1 -->
+        <item>360</item> <!-- 2 -->
+        <item>546</item> <!-- 3 -->
+        <item>371</item> <!-- 4 -->
+        <item>162</item> <!-- 5 -->
+        <item>498</item> <!-- 6 -->
+        <item>373</item> <!-- 7 -->
+        <item>369</item> <!-- 8 -->
+        <item>192</item> <!-- 9 -->
+        <item>411</item> <!-- 10 -->
+        <item>497</item> <!-- 11 -->
+        <item>538</item> <!-- 12 -->
+        <item>188</item> <!-- 13 -->
+        <item>438</item> <!-- 14 -->
+        <item>356</item> <!-- 15 -->
+        <item>428</item> <!-- 16 -->
+        <item>211</item> <!-- 17 -->
+        <item>437</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_jubilee_distance_Yellow">
+        <item>0</item>
+        <item>337</item> <!-- 1 -->
+        <item>352</item> <!-- 2 -->
+        <item>526</item> <!-- 3 -->
+        <item>349</item> <!-- 4 -->
+        <item>141</item> <!-- 5 -->
+        <item>480</item> <!-- 6 -->
+        <item>341</item> <!-- 7 -->
+        <item>344</item> <!-- 8 -->
+        <item>182</item> <!-- 9 -->
+        <item>403</item> <!-- 10 -->
+        <item>488</item> <!-- 11 -->
+        <item>516</item> <!-- 12 -->
+        <item>176</item> <!-- 13 -->
+        <item>423</item> <!-- 14 -->
+        <item>346</item> <!-- 15 -->
+        <item>418</item> <!-- 16 -->
+        <item>199</item> <!-- 17 -->
+        <item>405</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_jubilee_distance_Red">
+        <item>0</item>
+        <item>318</item> <!-- 1 -->
+        <item>271</item> <!-- 2 -->
+        <item>506</item> <!-- 3 -->
+        <item>332</item> <!-- 4 -->
+        <item>132</item> <!-- 5 -->
+        <item>422</item> <!-- 6 -->
+        <item>329</item> <!-- 7 -->
+        <item>326</item> <!-- 8 -->
+        <item>139</item> <!-- 9 -->
+        <item>387</item> <!-- 10 -->
+        <item>470</item> <!-- 11 -->
+        <item>479</item> <!-- 12 -->
+        <item>147</item> <!-- 13 -->
+        <item>415</item> <!-- 14 -->
+        <item>341</item> <!-- 15 -->
+        <item>409</item> <!-- 16 -->
+        <item>180</item> <!-- 17 -->
+        <item>372</item> <!-- 18 -->
+    </integer-array>
+
 </resources>
