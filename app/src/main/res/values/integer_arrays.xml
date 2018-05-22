@@ -501,4 +501,87 @@
         <item>317</item> <!-- 18 -->
     </integer-array>
 
+    <integer-array
+        name="sa_strathtyrum_distance_White">
+        <item>0</item>
+        <item>332</item> <!-- 1 -->
+        <item>350</item> <!-- 2 -->
+        <item>154</item> <!-- 3 -->
+        <item>298</item> <!-- 4 -->
+        <item>497</item> <!-- 5 -->
+        <item>125</item> <!-- 6 -->
+        <item>331</item> <!-- 7 -->
+        <item>183</item> <!-- 8 -->
+        <item>366</item> <!-- 9 -->
+        <item>338</item> <!-- 10 -->
+        <item>512</item> <!-- 11 -->
+        <item>389</item> <!-- 12 -->
+        <item>168</item> <!-- 13 -->
+        <item>350</item> <!-- 14 -->
+        <item>300</item> <!-- 15 -->
+        <item>137</item> <!-- 16 -->
+        <item>376</item> <!-- 17 -->
+        <item>414</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_strathtyrum_distance_Yellow">
+        <item>0</item>
+        <item>327</item> <!-- 1 -->
+        <item>319</item> <!-- 2 -->
+        <item>149</item> <!-- 3 -->
+        <item>256</item> <!-- 4 -->
+        <item>451</item> <!-- 5 -->
+        <item>120</item> <!-- 6 -->
+        <item>290</item> <!-- 7 -->
+        <item>160</item> <!-- 8 -->
+        <item>340</item> <!-- 9 -->
+        <item>292</item> <!-- 10 -->
+        <item>442</item> <!-- 11 -->
+        <item>312</item> <!-- 12 -->
+        <item>143</item> <!-- 13 -->
+        <item>312</item> <!-- 14 -->
+        <item>265</item> <!-- 15 -->
+        <item>120</item> <!-- 16 -->
+        <item>321</item> <!-- 17 -->
+        <item>385</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_strathtyrum_distance_Red">
+        <item>0</item>
+        <item>315</item> <!-- 1 -->
+        <item>312</item> <!-- 2 -->
+        <item>140</item> <!-- 3 -->
+        <item>248</item> <!-- 4 -->
+        <item>384</item> <!-- 5 -->
+        <item>110</item> <!-- 6 -->
+        <item>284</item> <!-- 7 -->
+        <item>154</item> <!-- 8 -->
+        <item>334</item> <!-- 9 -->
+        <item>288</item> <!-- 10 -->
+        <item>401</item> <!-- 11 -->
+        <item>308</item> <!-- 12 -->
+        <item>133</item> <!-- 13 -->
+        <item>264</item> <!-- 14 -->
+        <item>257</item> <!-- 15 -->
+        <item>114</item> <!-- 16 -->
+        <item>314</item> <!-- 17 -->
+        <item>345</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_balgove_distance_White">
+        <item>0</item>
+        <item>220</item> <!-- 1 -->
+        <item>219</item> <!-- 2 -->
+        <item>104</item> <!-- 3 -->
+        <item>194</item> <!-- 4 -->
+        <item>161</item> <!-- 5 -->
+        <item>298</item> <!-- 6 -->
+        <item>103</item> <!-- 7 -->
+        <item>116</item> <!-- 8 -->
+        <item>105</item> <!-- 9 -->
+    </integer-array>
+
 </resources>
