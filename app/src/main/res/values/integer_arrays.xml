@@ -225,4 +225,142 @@
         <item>430</item> <!-- 18 -->
     </integer-array>
 
+    <integer-array
+        name="sa_old_distance_White">
+        <item>0</item>
+        <item>376</item> <!-- 1 -->
+        <item>411</item> <!-- 2 -->
+        <item>370</item> <!-- 3 -->
+        <item>419</item> <!-- 4 -->
+        <item>514</item> <!-- 5 -->
+        <item>374</item> <!-- 6 -->
+        <item>359</item> <!-- 7 -->
+        <item>166</item> <!-- 8 -->
+        <item>347</item> <!-- 9 -->
+        <item>340</item> <!-- 10 -->
+        <item>174</item> <!-- 11 -->
+        <item>316</item> <!-- 12 -->
+        <item>418</item> <!-- 13 -->
+        <item>530</item> <!-- 14 -->
+        <item>414</item> <!-- 15 -->
+        <item>381</item> <!-- 16 -->
+        <item>455</item> <!-- 17 -->
+        <item>357</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_old_distance_Yellow">
+        <item>0</item>
+        <item>355</item> <!-- 1 -->
+        <item>395</item> <!-- 2 -->
+        <item>337</item> <!-- 3 -->
+        <item>411</item> <!-- 4 -->
+        <item>514</item> <!-- 5 -->
+        <item>360</item> <!-- 6 -->
+        <item>349</item> <!-- 7 -->
+        <item>154</item> <!-- 8 -->
+        <item>289</item> <!-- 9 -->
+        <item>311</item> <!-- 10 -->
+        <item>164</item> <!-- 11 -->
+        <item>304</item> <!-- 12 -->
+        <item>388</item> <!-- 13 -->
+        <item>523</item> <!-- 14 -->
+        <item>391</item> <!-- 15 -->
+        <item>345</item> <!-- 16 -->
+        <item>436</item> <!-- 17 -->
+        <item>361</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_old_distance_Red">
+        <item>0</item>
+        <item>339</item> <!-- 1 -->
+        <item>375</item> <!-- 2 -->
+        <item>321</item> <!-- 3 -->
+        <item>401</item> <!-- 4 -->
+        <item>454</item> <!-- 5 -->
+        <item>325</item> <!-- 6 -->
+        <item>335</item> <!-- 7 -->
+        <item>145</item> <!-- 8 -->
+        <item>261</item> <!-- 9 -->
+        <item>296</item> <!-- 10 -->
+        <item>150</item> <!-- 11 -->
+        <item>304</item> <!-- 12 -->
+        <item>377</item> <!-- 13 -->
+        <item>487</item> <!-- 14 -->
+        <item>369</item> <!-- 15 -->
+        <item>325</item> <!-- 16 -->
+        <item>426</item> <!-- 17 -->
+        <item>342</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_new_distance_White">
+        <item>0</item>
+        <item>336</item> <!-- 1 -->
+        <item>367</item> <!-- 2 -->
+        <item>511</item> <!-- 3 -->
+        <item>369</item> <!-- 4 -->
+        <item>180</item> <!-- 5 -->
+        <item>445</item> <!-- 6 -->
+        <item>356</item> <!-- 7 -->
+        <item>481</item> <!-- 8 -->
+        <item>225</item> <!-- 9 -->
+        <item>464</item> <!-- 10 -->
+        <item>368</item> <!-- 11 -->
+        <item>518</item> <!-- 12 -->
+        <item>157</item> <!-- 13 -->
+        <item>386</item> <!-- 14 -->
+        <item>394</item> <!-- 15 -->
+        <item>431</item> <!-- 16 -->
+        <item>229</item> <!-- 17 -->
+        <item>409</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_new_distance_Yellow">
+        <item>0</item>
+        <item>229</item> <!-- 1 -->
+        <item>367</item> <!-- 2 -->
+        <item>511</item> <!-- 3 -->
+        <item>351</item> <!-- 4 -->
+        <item>167</item> <!-- 5 -->
+        <item>433</item> <!-- 6 -->
+        <item>336</item> <!-- 7 -->
+        <item>472</item> <!-- 8 -->
+        <item>225</item> <!-- 9 -->
+        <item>457</item> <!-- 10 -->
+        <item>331</item> <!-- 11 -->
+        <item>493</item> <!-- 12 -->
+        <item>147</item> <!-- 13 -->
+        <item>370</item> <!-- 14 -->
+        <item>379</item> <!-- 15 -->
+        <item>416</item> <!-- 16 -->
+        <item>211</item> <!-- 17 -->
+        <item>397</item> <!-- 18 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_new_distance_Red">
+        <item>0</item>
+        <item>282</item> <!-- 1 -->
+        <item>356</item> <!-- 2 -->
+        <item>500</item> <!-- 3 -->
+        <item>351</item> <!-- 4 -->
+        <item>158</item> <!-- 5 -->
+        <item>401</item> <!-- 6 -->
+        <item>320</item> <!-- 7 -->
+        <item>464</item> <!-- 8 -->
+        <item>204</item> <!-- 9 -->
+        <item>427</item> <!-- 10 -->
+        <item>308</item> <!-- 11 -->
+        <item>447</item> <!-- 12 -->
+        <item>133</item> <!-- 13 -->
+        <item>363</item> <!-- 14 -->
+        <item>312</item> <!-- 15 -->
+        <item>388</item> <!-- 16 -->
+        <item>192</item> <!-- 17 -->
+        <item>386</item> <!-- 18 -->
+    </integer-array>
+
 </resources>

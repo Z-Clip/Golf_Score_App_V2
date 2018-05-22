@@ -100,43 +100,43 @@ public class MainActivity extends AppCompatActivity {
 
     //On click method executed when St. Andrews Old Course is selected.
     public void setCourseSAOld (View view) {
-        course="old";
+        course="sa_old";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Castle Course is selected.
     public void setCourseSACastle (View view) {
-        course="castle";
+        course="sa_castle";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews New Course is selected.
     public void setCourseSANew (View view) {
-        course="new";
+        course="sa_new";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Jubilee Course is selected.
     public void setCourseSAJubilee (View view) {
-        course="jubilee";
+        course="sa_jubilee";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Edan Course is selected.
     public void setCourseSAEdan (View view) {
-        course="edan";
+        course="sa_edan";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Strathtyrum Course is selected.
     public void setCourseSAStrathtyrum (View view) {
-        course="strathtyrum";
+        course="sa_strathtyrum";
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Balgove Course is selected.
     public void setCourseSABalgove (View view) {
-        course="balgove";
+        course="sa_balgove";
         afterCourseSelection();
     }
 

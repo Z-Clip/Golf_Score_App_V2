@@ -7,26 +7,70 @@
         <item>Red</item>
     </string-array>
 
+    <string-array name="sa_old_hole_names">
+        <item></item>
+        <item>Burn</item> <!-- 1 -->
+        <item>Dyke</item> <!-- 2 -->
+        <item>Cartgate (Out)</item> <!-- 3 -->
+        <item>Ginger Beer</item> <!-- 4 -->
+        <item>Hole O'Cross (Out)</item> <!-- 5 -->
+        <item>Heathery (Out)</item> <!-- 6 -->
+        <item>High (Out)</item> <!-- 7 -->
+        <item>Short</item> <!-- 8 -->
+        <item>End</item> <!-- 9 -->
+        <item>Bobby Jones</item> <!-- 10 -->
+        <item>High (In)</item> <!-- 11 -->
+        <item>Heathery (In)</item> <!-- 12 -->
+        <item>Hole O'Cross (In)</item> <!-- 13 -->
+        <item>Long</item> <!-- 14 -->
+        <item>Cartgate (In)</item> <!-- 15 -->
+        <item>Corner of the Dyke</item> <!-- 16 -->
+        <item>Road</item> <!-- 17 -->
+        <item>Tom Morris</item> <!-- 18 -->
+    </string-array>
+
     <string-array name="sa_castle_hole_names">
         <item></item>
-        <item>Ford</item>
-        <item>St Rule</item>
-        <item>Cathedral</item>
-        <item>Briery Hill</item>
-        <item>Brownhills</item>
-        <item>Pier</item>
-        <item>Maiden Rock</item>
-        <item>Cave</item>
-        <item>Kinkell Ness</item>
-        <item>Horseshoe</item>
-        <item>Maiden Pinks</item>
-        <item>Boar's Chase</item>
-        <item>High</item>
-        <item>Covenanters</item>
-        <item>Spinkston</item>
-        <item>Craigendaff</item>
-        <item>Braes</item>
-        <item>Rock and Spindle</item>
+        <item>Ford</item> <!-- 1 -->
+        <item>St Rule</item> <!-- 2 -->
+        <item>Cathedral</item> <!-- 3 -->
+        <item>Briery Hill</item> <!-- 4 -->
+        <item>Brownhills</item> <!-- 5 -->
+        <item>Pier</item> <!-- 6 -->
+        <item>Maiden Rock</item> <!-- 7 -->
+        <item>Cave</item> <!-- 8 -->
+        <item>Kinkell Ness</item> <!-- 9 -->
+        <item>Horseshoe</item> <!-- 10 -->
+        <item>Maiden Pinks</item> <!-- 11 -->
+        <item>Boar's Chase</item> <!-- 12 -->
+        <item>High</item> <!-- 13 -->
+        <item>Covenanters</item> <!-- 14 -->
+        <item>Spinkston</item> <!-- 15 -->
+        <item>Craigendaff</item> <!-- 16 -->
+        <item>Braes</item> <!-- 17 -->
+        <item>Rock and Spindle</item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_new_hole_names">
+        <item></item>
+        <item>Hole 1</item> <!-- 1 -->
+        <item>Hole 2</item> <!-- 2 -->
+        <item>Hole 3</item> <!-- 3 -->
+        <item>Hole 4</item> <!-- 4 -->
+        <item>Hole 5</item> <!-- 5 -->
+        <item>Hole 6</item> <!-- 6 -->
+        <item>Hole 7</item> <!-- 7 -->
+        <item>Hole 8</item> <!-- 8 -->
+        <item>Hole 9</item> <!-- 9 -->
+        <item>Hole 10</item> <!-- 10 -->
+        <item>Hole 11</item> <!-- 11 -->
+        <item>Hole 12</item> <!-- 12 -->
+        <item>Hole 13</item> <!-- 13 -->
+        <item>Hole 14</item> <!-- 14 -->
+        <item>Hole 15</item> <!-- 15 -->
+        <item>Hole 16</item> <!-- 16 -->
+        <item>Hole 17</item> <!-- 17 -->
+        <item>Hole 18</item> <!-- 18 -->
     </string-array>
 
 </resources>
