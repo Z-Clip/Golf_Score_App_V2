@@ -155,8 +155,7 @@
                 android:id="@+id/player_1_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/st_andrew_button_background">
+                style="@style/player_info_view_group">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -198,35 +197,17 @@
 
                     <EditText
                         android:id="@+id/player_1_name"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_name"
                         android:text="@string/player_1"/>
 
                     <EditText
                         android:id="@+id/player_1_handicap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_handicap"
                         android:text="0"/>
 
                     <Button
                         android:id="@+id/player_1_tee"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        style="@style/player_tee"
                         android:text="X"/>
 
                 </LinearLayout>
@@ -238,9 +219,7 @@
                 android:id="@+id/player_2_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/st_andrew_button_background"
-                android:layout_marginTop="16dp">
+                style="@style/player_info_view_group">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -282,35 +261,17 @@
 
                     <EditText
                         android:id="@+id/player_2_name"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_name"
                         android:text="@string/player_2"/>
 
                     <EditText
                         android:id="@+id/player_2_handicap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_handicap"
                         android:text="0"/>
 
                     <Button
                         android:id="@+id/player_2_tee"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        style="@style/player_tee"
                         android:text="X"/>
 
                 </LinearLayout>
@@ -322,9 +283,7 @@
                 android:id="@+id/player_3_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/st_andrew_button_background"
-                android:layout_marginTop="16dp">
+                style="@style/player_info_view_group">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -366,35 +325,17 @@
 
                     <EditText
                         android:id="@+id/player_3_name"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_name"
                         android:text="@string/player_3"/>
 
                     <EditText
                         android:id="@+id/player_3_handicap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_handicap"
                         android:text="0"/>
 
                     <Button
                         android:id="@+id/player_3_tee"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        style="@style/player_tee"
                         android:text="X"/>
 
                 </LinearLayout>
@@ -406,9 +347,7 @@
                 android:id="@+id/player_4_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/st_andrew_button_background"
-                android:layout_marginTop="16dp">
+                style="@style/player_info_view_group">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -450,35 +389,17 @@
 
                     <EditText
                         android:id="@+id/player_4_name"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_name"
                         android:text="@string/player_4"/>
 
                     <EditText
                         android:id="@+id/player_4_handicap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/White"
-                        android:layout_margin="6dp"
-                        android:paddingLeft="8dp"
-                        android:paddingStart="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingEnd="8dp"
+                        style="@style/player_handicap"
                         android:text="0"/>
 
                     <Button
                         android:id="@+id/player_4_tee"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        style="@style/player_tee"
                         android:text="X"/>
 
                 </LinearLayout>
