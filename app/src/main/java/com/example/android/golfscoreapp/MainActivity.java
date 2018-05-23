@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     public LinearLayout playerCountViewGroup;
     public TextView playerCountView;
     public ScrollView playerInfoViewGroup;
+    public LinearLayout playerTwoInfoView;
+    public LinearLayout playerThreeInfoView;
+    public LinearLayout playerFourInfoView;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -78,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
         playerCountView=findViewById(R.id.player_count_view);
         playerCountView.setText(String.valueOf(playerCount));
         playerInfoViewGroup=findViewById(R.id.player_info_view_group);
+        playerTwoInfoView=findViewById(R.id.player_2_info);
+        playerThreeInfoView=findViewById(R.id.player_3_info);
+        playerFourInfoView=findViewById(R.id.player_4_info);
     }
 
     //On click method executed when a course is selected. Sets visibilities of views.
@@ -91,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
         if (playerCount < 4) {
             playerCount = playerCount + 1;
             playerCountView.setText(String.valueOf(playerCount));
+            switch (playerCount) {
+                case 2:
+                    playerTwoInfoView.setVisibility(View.VISIBLE);
+                    break;
+                case 3:
+                    playerThreeInfoView.setVisibility(View.VISIBLE);
+                    break;
+                case 4:
+                    playerFourInfoView.setVisibility(View.VISIBLE);
+                    break;
+            }
         }
     }
 
@@ -98,6 +115,17 @@ public class MainActivity extends AppCompatActivity {
         if (playerCount > 1) {
             playerCount = playerCount - 1;
             playerCountView.setText(String.valueOf(playerCount));
+            switch (playerCount) {
+                case 1:
+                    playerTwoInfoView.setVisibility(View.GONE);
+                    break;
+                case 2:
+                    playerThreeInfoView.setVisibility(View.GONE);
+                    break;
+                case 3:
+                    playerFourInfoView.setVisibility(View.GONE);
+                    break;
+            }
         }
     }
 
