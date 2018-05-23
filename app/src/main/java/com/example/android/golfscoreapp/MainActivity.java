@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public ScrollView coursesViewGroup;
     public LinearLayout playerCountViewGroup;
     public TextView playerCountView;
+    public ScrollView playerInfoViewGroup;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -76,12 +77,14 @@ public class MainActivity extends AppCompatActivity {
         playerCountViewGroup=findViewById(R.id.player_count_view_group);
         playerCountView=findViewById(R.id.player_count_view);
         playerCountView.setText(String.valueOf(playerCount));
+        playerInfoViewGroup=findViewById(R.id.player_info_view_group);
     }
 
     //On click method executed when a course is selected. Sets visibilities of views.
     public void afterCourseSelection () {
         coursesViewGroup.setVisibility(View.GONE);
         playerCountViewGroup.setVisibility(View.VISIBLE);
+        playerInfoViewGroup.setVisibility(View.VISIBLE);
     }
 
     public void incrementPlayers (View view) {

@@ -19,58 +19,6 @@
         android:layout_height="wrap_content"
         android:text="@string/initial_header" />
 
-    <LinearLayout
-        android:id="@+id/player_count_view_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/initial_header"
-        android:layout_margin="8dp"
-        android:background="@drawable/text_view_background"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="@string/player_count"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/player_increment"
-            style="@style/button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:onClick="incrementPlayers"
-            android:text="@string/increment" />
-
-        <TextView
-            android:id="@+id/player_count_view"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/player_decrement"
-            style="@style/button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:onClick="decrementPlayers"
-            android:text="@string/decrement" />
-
-    </LinearLayout>
-
     <ScrollView
         android:id="@+id/course_selection_view_group"
         android:layout_width="match_parent"
@@ -132,6 +80,410 @@
                 android:layout_height="wrap_content"
                 android:text="@string/sa_balgove"
                 android:onClick="setCourseSABalgove"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/player_count_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/initial_header"
+        android:layout_margin="8dp"
+        android:background="@drawable/text_view_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/player_count"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/player_increment"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="incrementPlayers"
+            android:text="@string/increment" />
+
+        <TextView
+            android:id="@+id/player_count_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/player_decrement"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="decrementPlayers"
+            android:text="@string/decrement" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/player_info_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/player_count_view_group"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/player_1_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/st_andrew_button_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_1_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/player_1"/>
+
+                    <EditText
+                        android:id="@+id/player_1_handicap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="0"/>
+
+                    <Button
+                        android:id="@+id/player_1_tee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="X"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_2_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/st_andrew_button_background"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_2_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/player_2"/>
+
+                    <EditText
+                        android:id="@+id/player_2_handicap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="0"/>
+
+                    <Button
+                        android:id="@+id/player_2_tee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="X"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_3_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/st_andrew_button_background"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_3_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/player_3"/>
+
+                    <EditText
+                        android:id="@+id/player_3_handicap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="0"/>
+
+                    <Button
+                        android:id="@+id/player_3_tee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="X"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_4_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/st_andrew_button_background"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_4_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/player_4"/>
+
+                    <EditText
+                        android:id="@+id/player_4_handicap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:layout_margin="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="0"/>
+
+                    <Button
+                        android:id="@+id/player_4_tee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="X"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
