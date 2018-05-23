@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
             playerCount = savedInstanceState.getInt("playerCount" , playerCount);
+            buildInitialObjects();
         }
     }
 
