@@ -4,7 +4,9 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public int hole = 1;
     public String course;
     public int playerCount = 1;
+    public String[] playerTee = new String[5];
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public LinearLayout playerTwoInfoView;
     public LinearLayout playerThreeInfoView;
     public LinearLayout playerFourInfoView;
+    public Button beginRound;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("phase" , phase);
         outState.putString("course" , course);
         outState.putInt("playerCount" , playerCount);
+        outState.putStringArray("playerTee" , playerTee);
     }
 
     //onCreate
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
             playerCount = savedInstanceState.getInt("playerCount" , playerCount);
+            playerTee = savedInstanceState.getStringArray("playerTee");
             buildInitialObjects();
         }
     }
@@ -85,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         playerTwoInfoView=findViewById(R.id.player_2_info);
         playerThreeInfoView=findViewById(R.id.player_3_info);
         playerFourInfoView=findViewById(R.id.player_4_info);
+        beginRound=findViewById(R.id.begin_round);
     }
 
     //On click method executed when a course is selected. Sets visibilities of views.
@@ -92,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         coursesViewGroup.setVisibility(View.GONE);
         playerCountViewGroup.setVisibility(View.VISIBLE);
         playerInfoViewGroup.setVisibility(View.VISIBLE);
+        beginRound.setVisibility(View.VISIBLE);
     }
 
     public void incrementPlayers (View view) {
@@ -119,15 +127,37 @@ public class MainActivity extends AppCompatActivity {
             switch (playerCount) {
                 case 1:
                     playerTwoInfoView.setVisibility(View.GONE);
+                    playerTee[3] = null;
                     break;
                 case 2:
                     playerThreeInfoView.setVisibility(View.GONE);
+                    playerTee[4] = null;
                     break;
                 case 3:
                     playerFourInfoView.setVisibility(View.GONE);
+                    playerTee[5] = null;
                     break;
             }
         }
+    }
+
+    public void setPlayerTee (View view) {
+        for (int i = 1; i <= playerCount; i++) {
+            RadioButton hard = findViewById(getResources().getIdentifier("player_" + i + "_tee_hard", "id", getPackageName()));
+            RadioButton medium = findViewById(getResources().getIdentifier("player_" + i + "_tee_medium", "id", getPackageName()));
+            RadioButton easy = findViewById(getResources().getIdentifier("player_" + i + "_tee_easy", "id", getPackageName()));
+            if (hard.isChecked()) {
+                playerTee [i] = String.valueOf(hard.getText());
+            } else if (medium.isChecked()) {
+                playerTee [i] = String.valueOf(medium.getText());
+            } else if (easy.isChecked()) {
+                playerTee [i] = String.valueOf(easy.getText());
+            }
+        }
+    }
+
+    public void beginRound(View view) {
+
     }
 
     //On click method executed when St. Andrews Old Course is selected.

@@ -21,4 +21,11 @@
     <string name="player_name">Player Name</string>
     <string name="handicap">Handicap</string>
     <string name="tee">Tee</string>
+
+    <string name="begin_round">Begin Round</string>
+
+    <string name="hard_tee_color">Red</string>
+    <string name="medium_tee_color">Yellow</string>
+    <string name="easy_tee_color">White</string>
+
 </resources>

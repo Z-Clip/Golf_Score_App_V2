@@ -183,7 +183,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="2"
                         android:text="@string/tee"
                         android:gravity="center_horizontal"
                         android:textColor="@color/White"/>
@@ -205,10 +205,31 @@
                         style="@style/player_handicap"
                         android:text="0"/>
 
-                    <Button
-                        android:id="@+id/player_1_tee"
-                        style="@style/player_tee"
-                        android:text="X"/>
+                    <RadioGroup
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -269,10 +290,31 @@
                         style="@style/player_handicap"
                         android:text="0"/>
 
-                    <Button
-                        android:id="@+id/player_2_tee"
-                        style="@style/player_tee"
-                        android:text="X"/>
+                    <RadioGroup
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -333,10 +375,31 @@
                         style="@style/player_handicap"
                         android:text="0"/>
 
-                    <Button
-                        android:id="@+id/player_3_tee"
-                        style="@style/player_tee"
-                        android:text="X"/>
+                    <RadioGroup
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -397,10 +460,31 @@
                         style="@style/player_handicap"
                         android:text="0"/>
 
-                    <Button
-                        android:id="@+id/player_4_tee"
-                        style="@style/player_tee"
-                        android:text="X"/>
+                    <RadioGroup
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -409,5 +493,15 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:visibility="gone"
+        style="@style/button"
+        android:id="@+id/begin_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/begin_round"
+        android:onClick="beginRound"/>
 
 </RelativeLayout>
