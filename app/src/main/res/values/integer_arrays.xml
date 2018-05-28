@@ -95,7 +95,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_edan_par">
+        name="sa_eden_par">
         <item>18</item> <!-- Hole count -->
         <item>4</item> <!-- 1 -->
         <item>4</item> <!-- 2 -->
@@ -157,7 +157,7 @@
 
     <!-- Distance Arrays -->
     <integer-array
-        name="sa_castle_distance_White">
+        name="sa_castle_distance_0">
         <item>0</item>
         <item>346</item> <!-- 1 -->
         <item>404</item> <!-- 2 -->
@@ -180,7 +180,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_castle_distance_Yellow">
+        name="sa_castle_distance_1">
         <item>0</item>
         <item>337</item> <!-- 1 -->
         <item>394</item> <!-- 2 -->
@@ -203,7 +203,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_castle_distance_Red">
+        name="sa_castle_distance_2">
         <item>0</item>
         <item>300</item> <!-- 1 -->
         <item>344</item> <!-- 2 -->
@@ -226,7 +226,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_old_distance_White">
+        name="sa_old_distance_0">
         <item>0</item>
         <item>376</item> <!-- 1 -->
         <item>411</item> <!-- 2 -->
@@ -249,7 +249,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_old_distance_Yellow">
+        name="sa_old_distance_1">
         <item>0</item>
         <item>355</item> <!-- 1 -->
         <item>395</item> <!-- 2 -->
@@ -272,7 +272,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_old_distance_Red">
+        name="sa_old_distance_2">
         <item>0</item>
         <item>339</item> <!-- 1 -->
         <item>375</item> <!-- 2 -->
@@ -295,7 +295,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_new_distance_White">
+        name="sa_new_distance_0">
         <item>0</item>
         <item>336</item> <!-- 1 -->
         <item>367</item> <!-- 2 -->
@@ -318,7 +318,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_new_distance_Yellow">
+        name="sa_new_distance_1">
         <item>0</item>
         <item>229</item> <!-- 1 -->
         <item>367</item> <!-- 2 -->
@@ -341,7 +341,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_new_distance_Red">
+        name="sa_new_distance_2">
         <item>0</item>
         <item>282</item> <!-- 1 -->
         <item>356</item> <!-- 2 -->
@@ -364,7 +364,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_jubilee_distance_White">
+        name="sa_jubilee_distance_0">
         <item>0</item>
         <item>367</item> <!-- 1 -->
         <item>360</item> <!-- 2 -->
@@ -387,7 +387,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_jubilee_distance_Yellow">
+        name="sa_jubilee_distance_1">
         <item>0</item>
         <item>337</item> <!-- 1 -->
         <item>352</item> <!-- 2 -->
@@ -410,7 +410,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_jubilee_distance_Red">
+        name="sa_jubilee_distance_2">
         <item>0</item>
         <item>318</item> <!-- 1 -->
         <item>271</item> <!-- 2 -->
@@ -433,7 +433,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_eden_distance_White">
+        name="sa_eden_distance_0">
         <item>0</item>
         <item>326</item> <!-- 1 -->
         <item>449</item> <!-- 2 -->
@@ -456,7 +456,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_eden_distance_Yellow">
+        name="sa_eden_distance_1">
         <item>0</item>
         <item>301</item> <!-- 1 -->
         <item>438</item> <!-- 2 -->
@@ -479,7 +479,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_eden_distance_Red">
+        name="sa_eden_distance_2">
         <item>0</item>
         <item>270</item> <!-- 1 -->
         <item>438</item> <!-- 2 -->
@@ -502,7 +502,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_strathtyrum_distance_White">
+        name="sa_strathtyrum_distance_0">
         <item>0</item>
         <item>332</item> <!-- 1 -->
         <item>350</item> <!-- 2 -->
@@ -525,7 +525,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_strathtyrum_distance_Yellow">
+        name="sa_strathtyrum_distance_1">
         <item>0</item>
         <item>327</item> <!-- 1 -->
         <item>319</item> <!-- 2 -->
@@ -548,7 +548,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_strathtyrum_distance_Red">
+        name="sa_strathtyrum_distance_2">
         <item>0</item>
         <item>315</item> <!-- 1 -->
         <item>312</item> <!-- 2 -->
@@ -571,7 +571,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_balgove_distance_White">
+        name="sa_balgove_distance_0">
         <item>0</item>
         <item>220</item> <!-- 1 -->
         <item>219</item> <!-- 2 -->
@@ -582,6 +582,16 @@
         <item>103</item> <!-- 7 -->
         <item>116</item> <!-- 8 -->
         <item>105</item> <!-- 9 -->
+    </integer-array>
+
+    <integer-array
+        name="sa_balgove_distance_1">
+        <item>0</item>
+    </integer-array>
+
+    <integer-array
+        name="sa_balgove_distance_2">
+        <item>0</item>
     </integer-array>
 
 </resources>

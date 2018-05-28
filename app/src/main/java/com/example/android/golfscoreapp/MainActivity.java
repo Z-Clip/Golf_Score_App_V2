@@ -24,9 +24,15 @@ public class MainActivity extends AppCompatActivity {
     public int hole = 1;
     public String course;
     public int playerCount = 1;
-    public String[] playerTeeAry = new String[5];
+    public int[] playerTeeAry = new int[5];
     public String[] playerNameAry = new String[5];
     public int[] playerHandicapAry = new int[5];
+    public int[] courseParAry;
+    public String[] courseHoleNameAry;
+    public int[] courseDistanceEasyAry;
+    public int[] courseDistanceMediumAry;
+    public int[] courseDistanceHardAry;
+    public String[] teeColorAry;
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -47,9 +53,14 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("phase" , phase);
         outState.putString("course" , course);
         outState.putInt("playerCount" , playerCount);
-        outState.putStringArray("playerTeeAry" , playerTeeAry);
+        outState.putIntArray("playerTeeAry" , playerTeeAry);
         outState.putStringArray("playerNameAry" , playerNameAry);
         outState.putIntArray("playerHandicapAry" , playerHandicapAry);
+        outState.putIntArray("courseParAry" , courseParAry);
+        outState.putIntArray("courseDistanceEasyAry" , courseDistanceEasyAry);
+        outState.putIntArray("courseDistanceMediumAry" , courseDistanceMediumAry);
+        outState.putIntArray("courseDistanceHardAry" , courseDistanceHardAry);
+        outState.putStringArray("courseHoleNameAry" , courseHoleNameAry);
     }
 
     //onCreate
@@ -73,9 +84,14 @@ public class MainActivity extends AppCompatActivity {
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
             playerCount = savedInstanceState.getInt("playerCount" , playerCount);
-            playerTeeAry = savedInstanceState.getStringArray("playerTeeAry");
+            playerTeeAry = savedInstanceState.getIntArray("playerTeeAry");
             playerNameAry = savedInstanceState.getStringArray("playerNameAry");
             playerHandicapAry = savedInstanceState.getIntArray("playerHandicapAry");
+            courseParAry = savedInstanceState.getIntArray("courseParAry");
+            courseDistanceEasyAry = savedInstanceState.getIntArray("courseDistanceEasyAry");
+            courseDistanceMediumAry = savedInstanceState.getIntArray("courseDistanceMediumAry");
+            courseDistanceHardAry = savedInstanceState.getIntArray("courseDistanceHardAry");
+            courseHoleNameAry = savedInstanceState.getStringArray("courseHoleNameAry");
             if (phase.equals("initial")) {
                 buildInitialObjects();
             }
@@ -140,12 +156,18 @@ public class MainActivity extends AppCompatActivity {
         playerCountViewGroup.setVisibility(View.GONE);
         playerInfoViewGroup.setVisibility(View.GONE);
         beginRoundViewGroup.setVisibility(View.GONE);
+        courseParAry=null;
+        courseDistanceEasyAry=null;
+        courseDistanceMediumAry=null;
+        courseDistanceHardAry=null;
+        courseHoleNameAry=null;
+        teeColorAry=null;
     }
 
     public void incrementPlayers (View view) {
         if (playerCount < 4) {
             playerCount = playerCount + 1;
-            playerTeeAry[0] = String.valueOf(playerCount);
+            playerTeeAry[0] = playerCount;
             playerNameAry[0] = String.valueOf(playerCount);
             playerHandicapAry[0] = playerCount;
             saveEditTextVars();
@@ -167,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrementPlayers (View view) {
         if (playerCount > 1) {
             playerCount = playerCount - 1;
-            playerTeeAry[0] = String.valueOf(playerCount);
+            playerTeeAry[0] = playerCount;
             playerNameAry[0] = String.valueOf(playerCount);
             playerHandicapAry[0] = playerCount;
             saveEditTextVars();
@@ -217,11 +239,11 @@ public class MainActivity extends AppCompatActivity {
             RadioButton medium = findViewById(getResources().getIdentifier("player_" + i + "_tee_medium", "id", getPackageName()));
             RadioButton easy = findViewById(getResources().getIdentifier("player_" + i + "_tee_easy", "id", getPackageName()));
             if (hard.isChecked()) {
-                playerTeeAry [i] = String.valueOf(hard.getText());
+                playerTeeAry [i] = 0;
             } else if (medium.isChecked()) {
-                playerTeeAry [i] = String.valueOf(medium.getText());
+                playerTeeAry [i] = 1;
             } else if (easy.isChecked()) {
-                playerTeeAry [i] = String.valueOf(easy.getText());
+                playerTeeAry [i] = 2;
             }
         }
     }
@@ -236,45 +258,61 @@ public class MainActivity extends AppCompatActivity {
         saveEditTextVars();
     }
 
+    public void setCourseArrays() {
+        courseParAry=getResources().getIntArray(getResources().getIdentifier(course +"_par", "array", getPackageName()));
+        courseDistanceEasyAry=getResources().getIntArray(getResources().getIdentifier(course +"_distance_0", "array", getPackageName()));
+        courseDistanceMediumAry=getResources().getIntArray(getResources().getIdentifier(course +"_distance_1", "array", getPackageName()));
+        courseDistanceHardAry=getResources().getIntArray(getResources().getIdentifier(course +"_distance_2", "array", getPackageName()));
+        courseHoleNameAry=getResources().getStringArray(getResources().getIdentifier(course +"_hole_names", "array", getPackageName()));
+        teeColorAry=getResources().getStringArray(getResources().getIdentifier("sa_tees", "array", getPackageName()));
+    }
+
     //On click method executed when St. Andrews Old Course is selected.
     public void setCourseSAOld (View view) {
         course="sa_old";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Castle Course is selected.
     public void setCourseSACastle (View view) {
         course="sa_castle";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews New Course is selected.
     public void setCourseSANew (View view) {
         course="sa_new";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Jubilee Course is selected.
     public void setCourseSAJubilee (View view) {
         course="sa_jubilee";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Edan Course is selected.
     public void setCourseSAEden (View view) {
         course="sa_eden";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Strathtyrum Course is selected.
     public void setCourseSAStrathtyrum (View view) {
         course="sa_strathtyrum";
+        setCourseArrays();
         afterCourseSelection();
     }
 
     //On click method executed when St. Andrews Balgove Course is selected.
     public void setCourseSABalgove (View view) {
         course="sa_balgove";
+        setCourseArrays();
         afterCourseSelection();
     }
 
