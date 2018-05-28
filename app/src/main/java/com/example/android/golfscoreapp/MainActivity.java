@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     public int hole = 1;
     public String course;
     public int playerCount = 1;
-    public String[] playerTee = new String[5];
+    public String[] playerTeeAry = new String[5];
+    public String[] playerNameAry = new String[5];
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("phase" , phase);
         outState.putString("course" , course);
         outState.putInt("playerCount" , playerCount);
-        outState.putStringArray("playerTee" , playerTee);
+        outState.putStringArray("playerTee" , playerTeeAry);
     }
 
     //onCreate
@@ -56,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
             phase = savedInstanceState.getString("phase" , phase);
             course = savedInstanceState.getString("course" , course);
             playerCount = savedInstanceState.getInt("playerCount" , playerCount);
-            playerTee = savedInstanceState.getStringArray("playerTee");
-            buildInitialObjects();
+            playerTeeAry = savedInstanceState.getStringArray("playerTee");
+            if (phase.equals("initial")) {
+                buildInitialObjects();
+            }
         }
     }
 
@@ -105,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
     public void incrementPlayers (View view) {
         if (playerCount < 4) {
             playerCount = playerCount + 1;
+            playerTeeAry[0] = String.valueOf(playerCount);
             playerCountView.setText(String.valueOf(playerCount));
             switch (playerCount) {
                 case 2:
@@ -123,22 +128,29 @@ public class MainActivity extends AppCompatActivity {
     public void decrementPlayers (View view) {
         if (playerCount > 1) {
             playerCount = playerCount - 1;
+            playerTeeAry[0] = String.valueOf(playerCount);
+            playerTeeAry[playerCount+1] = null;
             playerCountView.setText(String.valueOf(playerCount));
             switch (playerCount) {
                 case 1:
                     playerTwoInfoView.setVisibility(View.GONE);
-                    playerTee[3] = null;
+                    clearPlayerInfo(2);
                     break;
                 case 2:
                     playerThreeInfoView.setVisibility(View.GONE);
-                    playerTee[4] = null;
+                    clearPlayerInfo(3);
                     break;
                 case 3:
                     playerFourInfoView.setVisibility(View.GONE);
-                    playerTee[5] = null;
+                    clearPlayerInfo(4);
                     break;
             }
         }
+    }
+
+    public void clearPlayerInfo (int player) {
+        RadioGroup teeRadioGroup = findViewById(getResources().getIdentifier("player_" + player + "_tee_group", "id", getPackageName()));
+        teeRadioGroup.clearCheck();
     }
 
     public void setPlayerTee (View view) {
@@ -147,17 +159,16 @@ public class MainActivity extends AppCompatActivity {
             RadioButton medium = findViewById(getResources().getIdentifier("player_" + i + "_tee_medium", "id", getPackageName()));
             RadioButton easy = findViewById(getResources().getIdentifier("player_" + i + "_tee_easy", "id", getPackageName()));
             if (hard.isChecked()) {
-                playerTee [i] = String.valueOf(hard.getText());
+                playerTeeAry [i] = String.valueOf(hard.getText());
             } else if (medium.isChecked()) {
-                playerTee [i] = String.valueOf(medium.getText());
+                playerTeeAry [i] = String.valueOf(medium.getText());
             } else if (easy.isChecked()) {
-                playerTee [i] = String.valueOf(easy.getText());
+                playerTeeAry [i] = String.valueOf(easy.getText());
             }
         }
     }
 
     public void beginRound(View view) {
-
     }
 
     //On click method executed when St. Andrews Old Course is selected.

@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Background Image -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/initial_layout_background" />
 
+    <!-- Header -->
     <TextView
         android:id="@+id/initial_header"
         style="@style/header"
@@ -19,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text="@string/initial_header" />
 
+    <!-- Course Selection -->
     <ScrollView
         android:id="@+id/course_selection_view_group"
         android:layout_width="match_parent"
@@ -85,6 +88,7 @@
 
     </ScrollView>
 
+    <!-- Adjust Player Count -->
     <LinearLayout
         android:visibility="gone"
         android:id="@+id/player_count_view_group"
@@ -137,6 +141,7 @@
 
     </LinearLayout>
 
+    <!-- Player Info Views -->
     <ScrollView
         android:visibility="gone"
         android:id="@+id/player_info_view_group"
@@ -146,11 +151,13 @@
         android:layout_centerInParent="true"
         android:layout_margin="8dp">
 
+        <!-- Player Info Container -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Player 1 Info-->
             <LinearLayout
                 android:id="@+id/player_1_info"
                 android:layout_width="match_parent"
@@ -206,6 +213,7 @@
                         android:text="0"/>
 
                     <RadioGroup
+                        android:id="@+id/player_1_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
@@ -235,6 +243,7 @@
 
             </LinearLayout>
 
+            <!-- Player 2 Info -->
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/player_2_info"
@@ -291,6 +300,7 @@
                         android:text="0"/>
 
                     <RadioGroup
+                        android:id="@+id/player_2_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
@@ -320,6 +330,7 @@
 
             </LinearLayout>
 
+            <!-- Player 3 Info -->
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/player_3_info"
@@ -376,6 +387,7 @@
                         android:text="0"/>
 
                     <RadioGroup
+                        android:id="@+id/player_3_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
@@ -405,6 +417,7 @@
 
             </LinearLayout>
 
+            <!-- Player 4 Info -->
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/player_4_info"
@@ -461,6 +474,7 @@
                         android:text="0"/>
 
                     <RadioGroup
+                        android:id="@+id/player_4_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
@@ -494,6 +508,7 @@
 
     </ScrollView>
 
+    <!-- Begin Round Button -->
     <Button
         android:visibility="gone"
         style="@style/button"
