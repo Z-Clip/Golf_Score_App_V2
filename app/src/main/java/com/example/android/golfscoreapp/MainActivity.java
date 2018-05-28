@@ -58,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.initial_layout_portrait);
         rebuildState(savedInstanceState);  //Rebuild vars on a state change
-        if (phase.equals("initial")) {
-            buildInitialObjects();
+        switch (phase) {
+            case "initial":
+                buildInitialObjects();
+                break;
         }
     }
 
