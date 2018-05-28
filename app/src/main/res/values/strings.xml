@@ -23,9 +23,13 @@
     <string name="tee">Tee</string>
 
     <string name="begin_round">Begin Round</string>
+    <string name="return_to_course_selection">Return To Course Selection</string>
 
     <string name="hard_tee_color">Red</string>
     <string name="medium_tee_color">Yellow</string>
     <string name="easy_tee_color">White</string>
+
+    <string name="background_image_content_description">background_image</string>
+    <string name="default_player_count">1</string>
 
 </resources>

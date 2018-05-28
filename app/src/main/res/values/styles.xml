@@ -30,6 +30,16 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="warning_button">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/button_background_warning</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="text_view">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
@@ -71,6 +81,8 @@
         <item name="android:paddingRight">8dp</item>
         <item name="android:paddingEnd">8dp</item>
         <item name="android:inputType">textPersonName</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:onClick">editTextOnClick</item>
     </style>
 
     <style name="player_handicap">
@@ -84,6 +96,8 @@
         <item name="android:paddingRight">8dp</item>
         <item name="android:paddingEnd">8dp</item>
         <item name="android:inputType">numberDecimal</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:onClick">editTextOnClick</item>
     </style>
 
     <style name="player_tee_radio_group">

@@ -1,6 +1,540 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/initial_layout_background"
+        android:contentDescription="@string/background_image_content_description"/>
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/initial_header"
+        style="@style/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_header" />
+
+    <!-- Course Selection -->
+    <ScrollView
+        android:id="@+id/course_selection_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/initial_header"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_old"
+                android:onClick="setCourseSAOld"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_castle"
+                android:onClick="setCourseSACastle"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_new"
+                android:onClick="setCourseSANew"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_jubilee"
+                android:onClick="setCourseSAJubilee"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_eden"
+                android:onClick="setCourseSAEden"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_strathtyrum"
+                android:onClick="setCourseSAStrathtyrum"/>
+
+            <Button
+                style="@style/st_andrews_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sa_balgove"
+                android:onClick="setCourseSABalgove"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Adjust Player Count -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/player_count_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/initial_header"
+        android:layout_margin="8dp"
+        android:background="@drawable/text_view_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/player_count"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/player_increment"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="incrementPlayers"
+            android:text="@string/increment" />
+
+        <TextView
+            android:id="@+id/player_count_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/default_player_count"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/player_decrement"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="decrementPlayers"
+            android:text="@string/decrement" />
+
+    </LinearLayout>
+
+    <!-- Player Info Views -->
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/player_info_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/player_count_view_group"
+        android:layout_above="@id/button_layout"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp">
+
+        <!-- Player Info Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Player 1 Info-->
+            <LinearLayout
+                android:id="@+id/player_1_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/player_info_view_group">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_1_name"
+                        style="@style/player_name"
+                        android:text="@string/player_1"/>
+
+                    <EditText
+                        android:id="@+id/player_1_handicap"
+                        style="@style/player_handicap"
+                        android:text="0"/>
+
+                    <RadioGroup
+                        android:id="@+id/player_1_tee_group"
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_1_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 2 Info -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_2_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/player_info_view_group">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_2_name"
+                        style="@style/player_name"
+                        android:text="@string/player_2"/>
+
+                    <EditText
+                        android:id="@+id/player_2_handicap"
+                        style="@style/player_handicap"
+                        android:text="0"/>
+
+                    <RadioGroup
+                        android:id="@+id/player_2_tee_group"
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_2_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 3 Info -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_3_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/player_info_view_group">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_3_name"
+                        style="@style/player_name"
+                        android:text="@string/player_3"/>
+
+                    <EditText
+                        android:id="@+id/player_3_handicap"
+                        style="@style/player_handicap"
+                        android:text="0"/>
+
+                    <RadioGroup
+                        android:id="@+id/player_3_tee_group"
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_3_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 4 Info -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_4_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/player_info_view_group">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/player_name"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/handicap"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tee"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/player_4_name"
+                        style="@style/player_name"
+                        android:text="@string/player_4"/>
+
+                    <EditText
+                        android:id="@+id/player_4_handicap"
+                        style="@style/player_handicap"
+                        android:text="0"/>
+
+                    <RadioGroup
+                        android:id="@+id/player_4_tee_group"
+                        style="@style/player_tee_radio_group">
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_hard"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/hard_tee_color"
+                            android:background="@color/Red"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_medium"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/medium_tee_color"
+                            android:background="@color/Yellow"
+                            android:onClick="setPlayerTee"/>
+
+                        <RadioButton
+                            android:id="@+id/player_4_tee_easy"
+                            style="@style/player_tee_radio_button"
+                            android:text="@string/easy_tee_color"
+                            android:background="@color/White"
+                            android:onClick="setPlayerTee"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Begin Round Button -->
+        <Button
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/begin_round"
+            android:onClick="beginRound"/>
+
+        <!-- Return To Course Selection Button -->
+        <Button
+            style="@style/warning_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/return_to_course_selection"
+            android:onClick="returnToCourseSelection"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
