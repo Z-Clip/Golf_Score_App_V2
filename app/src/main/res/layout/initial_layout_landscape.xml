@@ -143,14 +143,14 @@
 
     <!-- Player Info Views -->
     <ScrollView
-        android:visibility="gone"
         android:id="@+id/player_info_view_group"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/player_count_view_group"
-        android:layout_above="@id/button_layout"
         android:layout_centerInParent="true"
-        android:layout_margin="8dp">
+        android:layout_above="@id/button_layout"
+        android:layout_margin="8dp"
+        android:visibility="gone">
 
         <!-- Player Info Container -->
         <LinearLayout
@@ -161,40 +161,40 @@
             <!-- Player 1 Info-->
             <LinearLayout
                 android:id="@+id/player_1_info"
+                style="@style/player_info_view_group"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/player_info_view_group">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                    android:layout_marginRight="4dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="@string/player_name"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/player_name"
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/handicap"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/handicap"
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="@string/tee"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/tee"
+                        android:textColor="@color/White" />
 
                 </LinearLayout>
 
@@ -206,37 +206,37 @@
                     <EditText
                         android:id="@+id/player_1_name"
                         style="@style/player_name"
-                        android:text="@string/player_1"/>
+                        android:text="@string/player_1" />
 
                     <EditText
                         android:id="@+id/player_1_handicap"
                         style="@style/player_handicap"
-                        android:text="0"/>
+                        android:text="0" />
 
                     <RadioGroup
                         android:id="@+id/player_1_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_1_tee_hard"
+                            android:id="@+id/player_1_tee_2"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/hard_tee_color"
                             android:background="@color/Red"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/hard_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_1_tee_medium"
+                            android:id="@+id/player_1_tee_1"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/medium_tee_color"
                             android:background="@color/Yellow"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_1_tee_easy"
+                            android:id="@+id/player_1_tee_0"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/easy_tee_color"
                             android:background="@color/White"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/easy_tee_color" />
 
                     </RadioGroup>
 
@@ -246,42 +246,42 @@
 
             <!-- Player 2 Info -->
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/player_2_info"
+                style="@style/player_info_view_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/player_info_view_group">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                    android:layout_marginRight="4dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:gravity="center_horizontal"
                         android:text="@string/player_name"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center_horizontal"
                         android:text="@string/handicap"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/tee"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/tee"
+                        android:textColor="@color/White" />
 
                 </LinearLayout>
 
@@ -293,37 +293,37 @@
                     <EditText
                         android:id="@+id/player_2_name"
                         style="@style/player_name"
-                        android:text="@string/player_2"/>
+                        android:text="@string/player_2" />
 
                     <EditText
                         android:id="@+id/player_2_handicap"
                         style="@style/player_handicap"
-                        android:text="0"/>
+                        android:text="0" />
 
                     <RadioGroup
                         android:id="@+id/player_2_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_2_tee_hard"
+                            android:id="@+id/player_2_tee_2"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/hard_tee_color"
                             android:background="@color/Red"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/hard_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_2_tee_medium"
+                            android:id="@+id/player_2_tee_1"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/medium_tee_color"
                             android:background="@color/Yellow"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_2_tee_easy"
+                            android:id="@+id/player_2_tee_0"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/easy_tee_color"
                             android:background="@color/White"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/easy_tee_color" />
 
                     </RadioGroup>
 
@@ -333,42 +333,42 @@
 
             <!-- Player 3 Info -->
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/player_3_info"
+                style="@style/player_info_view_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/player_info_view_group">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                    android:layout_marginRight="4dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:gravity="center_horizontal"
                         android:text="@string/player_name"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center_horizontal"
                         android:text="@string/handicap"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/tee"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/tee"
+                        android:textColor="@color/White" />
 
                 </LinearLayout>
 
@@ -380,37 +380,37 @@
                     <EditText
                         android:id="@+id/player_3_name"
                         style="@style/player_name"
-                        android:text="@string/player_3"/>
+                        android:text="@string/player_3" />
 
                     <EditText
                         android:id="@+id/player_3_handicap"
                         style="@style/player_handicap"
-                        android:text="0"/>
+                        android:text="0" />
 
                     <RadioGroup
                         android:id="@+id/player_3_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_3_tee_hard"
+                            android:id="@+id/player_3_tee_2"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/hard_tee_color"
                             android:background="@color/Red"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/hard_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_3_tee_medium"
+                            android:id="@+id/player_3_tee_1"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/medium_tee_color"
                             android:background="@color/Yellow"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_3_tee_easy"
+                            android:id="@+id/player_3_tee_0"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/easy_tee_color"
                             android:background="@color/White"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/easy_tee_color" />
 
                     </RadioGroup>
 
@@ -420,42 +420,42 @@
 
             <!-- Player 4 Info -->
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/player_4_info"
+                style="@style/player_info_view_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/player_info_view_group">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                    android:layout_marginRight="4dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:gravity="center_horizontal"
                         android:text="@string/player_name"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center_horizontal"
                         android:text="@string/handicap"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/tee"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/White"/>
+                        android:text="@string/tee"
+                        android:textColor="@color/White" />
 
                 </LinearLayout>
 
@@ -467,37 +467,37 @@
                     <EditText
                         android:id="@+id/player_4_name"
                         style="@style/player_name"
-                        android:text="@string/player_4"/>
+                        android:text="@string/player_4" />
 
                     <EditText
                         android:id="@+id/player_4_handicap"
                         style="@style/player_handicap"
-                        android:text="0"/>
+                        android:text="0" />
 
                     <RadioGroup
                         android:id="@+id/player_4_tee_group"
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_4_tee_hard"
+                            android:id="@+id/player_4_tee_2"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/hard_tee_color"
                             android:background="@color/Red"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/hard_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_4_tee_medium"
+                            android:id="@+id/player_4_tee_1"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/medium_tee_color"
                             android:background="@color/Yellow"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_4_tee_easy"
+                            android:id="@+id/player_4_tee_0"
                             style="@style/player_tee_radio_button"
-                            android:text="@string/easy_tee_color"
                             android:background="@color/White"
-                            android:onClick="setPlayerTee"/>
+                            android:onClick="setPlayerTee"
+                            android:text="@string/easy_tee_color" />
 
                     </RadioGroup>
 

@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     public int hole = 1;
     public String course;
     public int playerCount = 1;
-    public int[] playerTeeAry = new int[5];
-    public String[] playerNameAry = new String[5];
-    public int[] playerHandicapAry = new int[5];
+    public int[] playerTeeAry = {0,2,2,2,2};
+    public String[] playerNameAry = {"","Player 1","Player 2","Player 3","Player 4"};
+    public int[] playerHandicapAry = {0,0,0,0,0};
     public int[] courseParAry;
     public String[] courseHoleNameAry;
     public int[] courseDistanceEasyAry;
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putIntArray("courseDistanceMediumAry" , courseDistanceMediumAry);
         outState.putIntArray("courseDistanceHardAry" , courseDistanceHardAry);
         outState.putStringArray("courseHoleNameAry" , courseHoleNameAry);
+        outState.putStringArray("teeColorAry" , teeColorAry);
     }
 
     //onCreate
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             courseDistanceMediumAry = savedInstanceState.getIntArray("courseDistanceMediumAry");
             courseDistanceHardAry = savedInstanceState.getIntArray("courseDistanceHardAry");
             courseHoleNameAry = savedInstanceState.getStringArray("courseHoleNameAry");
+            teeColorAry = savedInstanceState.getStringArray("teeColorAry");
             if (phase.equals("initial")) {
                 buildInitialObjects();
             }
@@ -137,7 +139,36 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 afterCourseSelection();
+                switch (playerCount) {
+                    case 1:
+                        setEditTextViewText();
+                        break;
+                    case 2:
+                        playerTwoInfoView.setVisibility(View.VISIBLE);
+                        setEditTextViewText();
+                        break;
+                    case 3:
+                        playerTwoInfoView.setVisibility(View.VISIBLE);
+                        playerThreeInfoView.setVisibility(View.VISIBLE);
+                        setEditTextViewText();
+                    case 4:
+                        playerTwoInfoView.setVisibility(View.VISIBLE);
+                        playerThreeInfoView.setVisibility(View.VISIBLE);
+                        playerFourInfoView.setVisibility(View.VISIBLE);
+                        setEditTextViewText();
+                }
                 break;
+        }
+    }
+
+    public void setEditTextViewText () {
+        for (int i = 1 ; i <= playerCount ; i++) {
+            EditText nameView = findViewById(getResources().getIdentifier("player_" + i + "_name", "id", getPackageName()));
+            nameView.setText(playerNameAry[i]);
+            EditText handicapView = findViewById(getResources().getIdentifier("player_" + i + "_handicap", "id", getPackageName()));
+            handicapView.setText(String.valueOf(playerHandicapAry[i]));
+            RadioButton teeView = findViewById(getResources().getIdentifier("player_" + i + "_tee_" + playerTeeAry[i], "id", getPackageName()));
+            teeView.setChecked(true);
         }
     }
 
@@ -234,16 +265,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setPlayerTee (View view) {
+        saveEditTextVars();
         for (int i = 1; i <= playerCount; i++) {
-            RadioButton hard = findViewById(getResources().getIdentifier("player_" + i + "_tee_hard", "id", getPackageName()));
-            RadioButton medium = findViewById(getResources().getIdentifier("player_" + i + "_tee_medium", "id", getPackageName()));
-            RadioButton easy = findViewById(getResources().getIdentifier("player_" + i + "_tee_easy", "id", getPackageName()));
+            RadioButton hard = findViewById(getResources().getIdentifier("player_" + i + "_tee_2", "id", getPackageName()));
+            RadioButton medium = findViewById(getResources().getIdentifier("player_" + i + "_tee_1", "id", getPackageName()));
+            RadioButton easy = findViewById(getResources().getIdentifier("player_" + i + "_tee_0", "id", getPackageName()));
             if (hard.isChecked()) {
-                playerTeeAry [i] = 0;
+                playerTeeAry [i] = 2;
             } else if (medium.isChecked()) {
                 playerTeeAry [i] = 1;
             } else if (easy.isChecked()) {
-                playerTeeAry [i] = 2;
+                playerTeeAry [i] = 0;
             }
         }
     }
