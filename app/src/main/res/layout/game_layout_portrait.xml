@@ -63,8 +63,9 @@
                     android:text="@string/player_1" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/increment" />
+                    style="@style/player_score_subtract_button"
+                    android:text="@string/decrement"
+                    android:onClick="player1DecrementScore"/>
 
                 <TextView
                     android:id="@+id/player_1_score_score"
@@ -72,8 +73,9 @@
                     android:text="1" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/decrement" />
+                    style="@style/player_score_add_button"
+                    android:text="@string/increment"
+                    android:onClick="player1IncrementScore"/>
 
             </LinearLayout>
 
@@ -87,10 +89,10 @@
                     android:id="@+id/player_2_score_name"
                     style="@style/player_score_player_name"
                     android:text="@string/player_2" />
-
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/increment" />
+                    style="@style/player_score_subtract_button"
+                    android:text="@string/decrement"
+                    android:onClick="player2DecrementScore"/>
 
                 <TextView
                     android:id="@+id/player_2_score_score"
@@ -98,8 +100,9 @@
                     android:text="1" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/decrement" />
+                    style="@style/player_score_add_button"
+                    android:text="@string/increment"
+                    android:onClick="player2IncrementScore"/>
 
             </LinearLayout>
 
@@ -115,8 +118,9 @@
                     android:text="@string/player_3" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/increment" />
+                    style="@style/player_score_subtract_button"
+                    android:text="@string/decrement"
+                    android:onClick="player3DecrementScore"/>
 
                 <TextView
                     android:id="@+id/player_3_score_score"
@@ -124,8 +128,9 @@
                     android:text="1" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/decrement" />
+                    style="@style/player_score_add_button"
+                    android:text="@string/increment"
+                    android:onClick="player3IncrementScore"/>
 
             </LinearLayout>
 
@@ -141,8 +146,9 @@
                     android:text="@string/player_4" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/increment" />
+                    style="@style/player_score_subtract_button"
+                    android:text="@string/decrement"
+                    android:onClick="player4DecrementScore"/>
 
                 <TextView
                     android:id="@+id/player_4_score_score"
@@ -150,8 +156,9 @@
                     android:text="1" />
 
                 <Button
-                    style="@style/player_score_add_subtract_button"
-                    android:text="@string/decrement" />
+                    style="@style/player_score_add_button"
+                    android:text="@string/increment"
+                    android:onClick="player4IncrementScore"/>
 
             </LinearLayout>
 
