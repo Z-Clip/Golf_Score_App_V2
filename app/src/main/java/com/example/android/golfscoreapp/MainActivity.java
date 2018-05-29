@@ -2,6 +2,7 @@ package com.example.android.golfscoreapp;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public int[] courseDistanceMediumAry;
     public int[] courseDistanceHardAry;
     public String[] teeColorAry;
+    public int holeCount;
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     public LinearLayout playerThreeInfoView;
     public LinearLayout playerFourInfoView;
     public LinearLayout beginRoundViewGroup;
+    public ImageView gameBackgroundImageView;
+    public TextView gameHoleNumberView;
+    public TextView gameHoleNameView;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -68,11 +74,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.initial_layout_portrait);
         rebuildState(savedInstanceState);  //Rebuild vars on a state change
         switch (phase) {
             case "initial":
+                setContentView(R.layout.initial_layout_portrait);
                 buildInitialObjects();
+                break;
+            case "game":
+                setContentView(R.layout.game_layout_portrait);
+                buildGameObjects();
                 break;
         }
     }
@@ -111,14 +121,26 @@ public class MainActivity extends AppCompatActivity {
     public void changeLayoutBasedOnOrientation (Configuration newConfig) {
         //Portrait orientation
         if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            if (phase.equals("initial")) {
-                setContentView(R.layout.initial_layout_portrait);
-                buildInitialObjects();
+            switch (phase) {
+                case "initial":
+                    setContentView(R.layout.initial_layout_portrait);
+                    buildInitialObjects();
+                    break;
+                case "game":
+                    setContentView(R.layout.game_layout_portrait);
+                    buildGameObjects();
+                    break;
             }
         } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            if (phase.equals("initial")) {
-                setContentView(R.layout.initial_layout_landscape);
-                buildInitialObjects();
+            switch (phase) {
+                case "initial":
+                    setContentView(R.layout.initial_layout_landscape);
+                    buildInitialObjects();
+                    break;
+                case "game":
+                    setContentView(R.layout.game_layout_portrait);
+                    buildGameObjects();
+                    break;
             }
         }
     }
@@ -288,6 +310,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         saveEditTextVars();
+        phase = "game";
+        setContentView(R.layout.game_layout_portrait);
+        buildGameObjects();
     }
 
     public void setCourseArrays() {
@@ -297,6 +322,46 @@ public class MainActivity extends AppCompatActivity {
         courseDistanceHardAry=getResources().getIntArray(getResources().getIdentifier(course +"_distance_2", "array", getPackageName()));
         courseHoleNameAry=getResources().getStringArray(getResources().getIdentifier(course +"_hole_names", "array", getPackageName()));
         teeColorAry=getResources().getStringArray(getResources().getIdentifier("sa_tees", "array", getPackageName()));
+        holeCount = courseParAry.length - 1;
+    }
+
+    public void buildGameObjects() {
+        gameBackgroundImageView = findViewById(R.id.game_background_image);
+        gameHoleNumberView = findViewById(R.id.hole_number);
+        gameHoleNameView = findViewById(R.id.hole_name);
+        setGameObjects();
+    }
+
+    public void setGameObjects() {
+        gameBackgroundImageView.setImageResource(getResources().getIdentifier("com.example.android.golfscoreapp:drawable/" + course + "_photo_hole_" + hole, null, null));
+        String holeNumber = "Hole " + hole;
+        gameHoleNumberView.setText(holeNumber);
+        if (courseHoleNameAry[hole].length() <= 0) {
+            gameHoleNameView.setVisibility(View.GONE);
+        } else {
+            gameHoleNameView.setVisibility(View.VISIBLE);
+            gameHoleNameView.setText(courseHoleNameAry[hole]);
+            gameHoleNumberView.setTextSize(20);
+            gameHoleNameView.setTextSize(20);
+        }
+    }
+
+    public void incrementHole(View view){
+        if (hole < holeCount) {
+            hole = hole + 1;
+        } else {
+            hole = 1;
+        }
+        setGameObjects();
+    }
+
+    public void decrementHole (View view) {
+        if (hole > 1) {
+            hole = hole -1;
+        } else {
+            hole = holeCount;
+        }
+        setGameObjects();
     }
 
     //On click method executed when St. Andrews Old Course is selected.

@@ -32,4 +32,10 @@
     <string name="background_image_content_description">background_image</string>
     <string name="default_player_count">1</string>
 
+    <string name="hole_number">Hole 1</string>
+    <string name="hole_name">Hole 1</string>
+
+    <string name="next_hole">Next Hole</string>
+    <string name="previous_hole">Previous Hole</string>
+
 </resources>

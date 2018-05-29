@@ -53,24 +53,24 @@
 
     <string-array name="sa_new_hole_names">
         <item></item>
-        <item>Hole 1</item> <!-- 1 -->
-        <item>Hole 2</item> <!-- 2 -->
-        <item>Hole 3</item> <!-- 3 -->
-        <item>Hole 4</item> <!-- 4 -->
-        <item>Hole 5</item> <!-- 5 -->
-        <item>Hole 6</item> <!-- 6 -->
-        <item>Hole 7</item> <!-- 7 -->
-        <item>Hole 8</item> <!-- 8 -->
-        <item>Hole 9</item> <!-- 9 -->
-        <item>Hole 10</item> <!-- 10 -->
-        <item>Hole 11</item> <!-- 11 -->
-        <item>Hole 12</item> <!-- 12 -->
-        <item>Hole 13</item> <!-- 13 -->
-        <item>Hole 14</item> <!-- 14 -->
-        <item>Hole 15</item> <!-- 15 -->
-        <item>Hole 16</item> <!-- 16 -->
-        <item>Hole 17</item> <!-- 17 -->
-        <item>Hole 18</item> <!-- 18 -->
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
     </string-array>
 
     <string-array name="sa_jubilee_hole_names">
@@ -97,59 +97,59 @@
 
     <string-array name="sa_eden_hole_names">
         <item></item>
-        <item>Hole 1</item> <!-- 1 -->
-        <item>Hole 2</item> <!-- 2 -->
-        <item>Hole 3</item> <!-- 3 -->
-        <item>Hole 4</item> <!-- 4 -->
-        <item>Hole 5</item> <!-- 5 -->
-        <item>Hole 6</item> <!-- 6 -->
-        <item>Hole 7</item> <!-- 7 -->
-        <item>Hole 8</item> <!-- 8 -->
-        <item>Hole 9</item> <!-- 9 -->
-        <item>Hole 10</item> <!-- 10 -->
-        <item>Hole 11</item> <!-- 11 -->
-        <item>Hole 12</item> <!-- 12 -->
-        <item>Hole 13</item> <!-- 13 -->
-        <item>Hole 14</item> <!-- 14 -->
-        <item>Hole 15</item> <!-- 15 -->
-        <item>Hole 16</item> <!-- 16 -->
-        <item>Hole 17</item> <!-- 17 -->
-        <item>Hole 18</item> <!-- 18 -->
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
     </string-array>
 
     <string-array name="sa_strathtyrum_hole_names">
         <item></item>
-        <item>Hole 1</item> <!-- 1 -->
-        <item>Hole 2</item> <!-- 2 -->
-        <item>Hole 3</item> <!-- 3 -->
-        <item>Hole 4</item> <!-- 4 -->
-        <item>Hole 5</item> <!-- 5 -->
-        <item>Hole 6</item> <!-- 6 -->
-        <item>Hole 7</item> <!-- 7 -->
-        <item>Hole 8</item> <!-- 8 -->
-        <item>Hole 9</item> <!-- 9 -->
-        <item>Hole 10</item> <!-- 10 -->
-        <item>Hole 11</item> <!-- 11 -->
-        <item>Hole 12</item> <!-- 12 -->
-        <item>Hole 13</item> <!-- 13 -->
-        <item>Hole 14</item> <!-- 14 -->
-        <item>Hole 15</item> <!-- 15 -->
-        <item>Hole 16</item> <!-- 16 -->
-        <item>Hole 17</item> <!-- 17 -->
-        <item>Hole 18</item> <!-- 18 -->
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
     </string-array>
 
     <string-array name="sa_balgove_hole_names">
         <item></item>
-        <item>Hole 1</item> <!-- 1 -->
-        <item>Hole 2</item> <!-- 2 -->
-        <item>Hole 3</item> <!-- 3 -->
-        <item>Hole 4</item> <!-- 4 -->
-        <item>Hole 5</item> <!-- 5 -->
-        <item>Hole 6</item> <!-- 6 -->
-        <item>Hole 7</item> <!-- 7 -->
-        <item>Hole 8</item> <!-- 8 -->
-        <item>Hole 9</item> <!-- 9 -->
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
      </string-array>
 
 </resources>
