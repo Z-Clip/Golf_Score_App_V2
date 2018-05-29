@@ -70,7 +70,7 @@
                 <TextView
                     android:id="@+id/player_1_score_score"
                     style="@style/player_score_score"
-                    android:text="1" />
+                    android:text="0" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -97,7 +97,7 @@
                 <TextView
                     android:id="@+id/player_2_score_score"
                     style="@style/player_score_score"
-                    android:text="1" />
+                    android:text="0" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -125,7 +125,7 @@
                 <TextView
                     android:id="@+id/player_3_score_score"
                     style="@style/player_score_score"
-                    android:text="1" />
+                    android:text="0" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -153,7 +153,7 @@
                 <TextView
                     android:id="@+id/player_4_score_score"
                     style="@style/player_score_score"
-                    android:text="1" />
+                    android:text="0" />
 
                 <Button
                     style="@style/player_score_add_button"

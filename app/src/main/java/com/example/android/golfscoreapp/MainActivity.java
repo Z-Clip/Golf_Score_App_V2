@@ -395,33 +395,33 @@ public class MainActivity extends AppCompatActivity {
             case 4:
                 player4ScoreGroup.setVisibility(View.VISIBLE);
                 player4NameView.setText(playerNameAry[4]);
-                if (player4Score[hole] > 1) {
+                if (player4Score[hole] > 0) {
                     player4ScoreView.setText(String.valueOf(player4Score[hole]));
                 } else {
-                    player4ScoreView.setText(String.valueOf(1));
+                    player4ScoreView.setText(String.valueOf(0));
                 }
             case 3:
                 player3ScoreGroup.setVisibility(View.VISIBLE);
                 player3NameView.setText(playerNameAry[3]);
-                if (player3Score[hole] > 1) {
+                if (player3Score[hole] > 0) {
                     player3ScoreView.setText(String.valueOf(player3Score[hole]));
                 } else {
-                    player3ScoreView.setText(String.valueOf(1));
+                    player3ScoreView.setText(String.valueOf(0));
                 }
             case 2:
                 player2ScoreGroup.setVisibility(View.VISIBLE);
                 player2NameView.setText(playerNameAry[2]);
-                if (player2Score[hole] > 1) {
+                if (player2Score[hole] > 0) {
                     player2ScoreView.setText(String.valueOf(player2Score[hole]));
                 } else {
-                    player2ScoreView.setText(String.valueOf(1));
+                    player2ScoreView.setText(String.valueOf(0));
                 }
             case 1:
                 player1NameView.setText(playerNameAry[1]);
-                if (player1Score[hole] > 1) {
+                if (player1Score[hole] > 0) {
                     player1ScoreView.setText(String.valueOf(player1Score[hole]));
                 } else {
-                    player1ScoreView.setText(String.valueOf(1));
+                    player1ScoreView.setText(String.valueOf(0));
                 }
                 break;
         }
@@ -466,28 +466,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void player1DecrementScore(View view) {
-        if (player1Score[hole] > 1) {
+        if (player1Score[hole] > 0) {
             player1Score[hole] = player1Score[hole] - 1;
             player1ScoreView.setText(String.valueOf(player1Score[hole]));
         }
     }
 
     public void player2DecrementScore(View view) {
-        if (player2Score[hole] > 1) {
+        if (player2Score[hole] > 0) {
             player2Score[hole] = player2Score[hole] - 1;
             player2ScoreView.setText(String.valueOf(player2Score[hole]));
         }
     }
 
     public void player3DecrementScore(View view) {
-        if (player3Score[hole] > 1) {
+        if (player3Score[hole] > 0) {
             player3Score[hole] = player3Score[hole] - 1;
             player3ScoreView.setText(String.valueOf(player3Score[hole]));
         }
     }
 
     public void player4DecrementScore(View view) {
-        if (player4Score[hole] > 1) {
+        if (player4Score[hole] > 0) {
             player4Score[hole] = player4Score[hole] - 1;
             player4ScoreView.setText(String.valueOf(player4Score[hole]));
         }
