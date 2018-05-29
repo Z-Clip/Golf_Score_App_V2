@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,57 +8,180 @@
         android:id="@+id/game_background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/initial_layout_background"
         android:contentDescription="@string/background_image_content_description"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/initial_layout_background" />
 
     <!-- Header -->
     <LinearLayout
+        android:id="@+id/score_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            style="@style/header"
             android:id="@+id/hole_number"
+            style="@style/header"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/hole_number" />
 
         <TextView
-            android:visibility="gone"
-            style="@style/header"
             android:id="@+id/hole_name"
+            style="@style/header"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:text="@string/hole_name" />
+            android:layout_weight="2"
+            android:text="@string/hole_name"
+            android:visibility="gone" />
 
     </LinearLayout>
 
-    <!-- Next and Previous Buttons -->
-    <LinearLayout
+
+    <!-- Player Scores -->
+    <ScrollView
+        android:id="@+id/player_score_counters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_above="@id/prev_next_buttons"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Player 1 -->
+            <LinearLayout
+                android:id="@+id/player_1_score_group"
+                style="@style/player_score_group">
+
+                <TextView
+                    android:id="@+id/player_1_score_name"
+                    style="@style/player_score_player_name"
+                    android:text="@string/player_1" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/increment" />
+
+                <TextView
+                    android:id="@+id/player_1_score_score"
+                    style="@style/player_score_score"
+                    android:text="1" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/decrement" />
+
+            </LinearLayout>
+
+            <!-- Player 2 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_2_score_group"
+                style="@style/player_score_group">
+
+                <TextView
+                    android:id="@+id/player_2_score_name"
+                    style="@style/player_score_player_name"
+                    android:text="@string/player_2" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/increment" />
+
+                <TextView
+                    android:id="@+id/player_2_score_score"
+                    style="@style/player_score_score"
+                    android:text="1" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/decrement" />
+
+            </LinearLayout>
+
+            <!-- Player 3 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_3_score_group"
+                style="@style/player_score_group">
+
+                <TextView
+                    android:id="@+id/player_3_score_name"
+                    style="@style/player_score_player_name"
+                    android:text="@string/player_3" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/increment" />
+
+                <TextView
+                    android:id="@+id/player_3_score_score"
+                    style="@style/player_score_score"
+                    android:text="1" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/decrement" />
+
+            </LinearLayout>
+
+            <!-- Player 4 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/player_4_score_group"
+                style="@style/player_score_group">
+
+                <TextView
+                    android:id="@+id/player_4_score_name"
+                    style="@style/player_score_player_name"
+                    android:text="@string/player_4" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/increment" />
+
+                <TextView
+                    android:id="@+id/player_4_score_score"
+                    style="@style/player_score_score"
+                    android:text="1" />
+
+                <Button
+                    style="@style/player_score_add_subtract_button"
+                    android:text="@string/decrement" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Next and Previous Buttons -->
+    <LinearLayout
+        android:id="@+id/prev_next_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
         <Button
             style="@style/warning_button"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/previous_hole"
-            android:onClick="decrementHole"/>
+            android:layout_weight="1"
+            android:onClick="decrementHole"
+            android:text="@string/previous_hole" />
 
         <Button
             style="@style/button"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/next_hole"
-            android:onClick="incrementHole"/>
+            android:layout_weight="1"
+            android:onClick="incrementHole"
+            android:text="@string/next_hole" />
 
     </LinearLayout>
 

@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     public int[] courseDistanceHardAry;
     public String[] teeColorAry;
     public int holeCount;
+    public int[] player1Score;
+    public int[] player2Score;
+    public int[] player3Score;
+    public int[] player4Score;
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -49,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
     public ImageView gameBackgroundImageView;
     public TextView gameHoleNumberView;
     public TextView gameHoleNameView;
+    public LinearLayout player2ScoreGroup;
+    public LinearLayout player3ScoreGroup;
+    public LinearLayout player4ScoreGroup;
+    public TextView player1NameView;
+    public TextView player2NameView;
+    public TextView player3NameView;
+    public TextView player4NameView;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -68,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
         outState.putIntArray("courseDistanceHardAry" , courseDistanceHardAry);
         outState.putStringArray("courseHoleNameAry" , courseHoleNameAry);
         outState.putStringArray("teeColorAry" , teeColorAry);
+        outState.putInt("holeCount" , holeCount);
+        outState.putIntArray("player1Score" , player1Score);
+        outState.putIntArray("player2Score" , player2Score);
+        outState.putIntArray("player3Score" , player3Score);
+        outState.putIntArray("player4Score" , player4Score);
     }
 
     //onCreate
@@ -104,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
             courseDistanceHardAry = savedInstanceState.getIntArray("courseDistanceHardAry");
             courseHoleNameAry = savedInstanceState.getStringArray("courseHoleNameAry");
             teeColorAry = savedInstanceState.getStringArray("teeColorAry");
+            holeCount = savedInstanceState.getInt("holeCount)" , holeCount);
+            player1Score = savedInstanceState.getIntArray("player1Score");
+            player2Score = savedInstanceState.getIntArray("player2Score");
+            player3Score = savedInstanceState.getIntArray("player3Score");
+            player4Score = savedInstanceState.getIntArray("player4Score");
             if (phase.equals("initial")) {
                 buildInitialObjects();
             }
@@ -323,12 +344,30 @@ public class MainActivity extends AppCompatActivity {
         courseHoleNameAry=getResources().getStringArray(getResources().getIdentifier(course +"_hole_names", "array", getPackageName()));
         teeColorAry=getResources().getStringArray(getResources().getIdentifier("sa_tees", "array", getPackageName()));
         holeCount = courseParAry.length - 1;
+        switch (playerCount) {
+            case 4:
+                player4Score = new int[holeCount + 1];
+            case 3:
+                player3Score = new int[holeCount + 1];
+            case 2:
+                player2Score = new int[holeCount + 1];
+            case 1:
+                player1Score = new int[holeCount + 1];
+                break;
+        }
     }
 
     public void buildGameObjects() {
         gameBackgroundImageView = findViewById(R.id.game_background_image);
         gameHoleNumberView = findViewById(R.id.hole_number);
         gameHoleNameView = findViewById(R.id.hole_name);
+        player2ScoreGroup = findViewById(R.id.player_2_score_group);
+        player3ScoreGroup = findViewById(R.id.player_3_score_group);
+        player4ScoreGroup = findViewById(R.id.player_4_score_group);
+        player1NameView = findViewById(R.id.player_1_score_name);
+        player2NameView = findViewById(R.id.player_2_score_name);
+        player3NameView = findViewById(R.id.player_3_score_name);
+        player4NameView = findViewById(R.id.player_4_score_name);
         setGameObjects();
     }
 
@@ -343,6 +382,20 @@ public class MainActivity extends AppCompatActivity {
             gameHoleNameView.setText(courseHoleNameAry[hole]);
             gameHoleNumberView.setTextSize(20);
             gameHoleNameView.setTextSize(20);
+        }
+        switch (playerCount) {
+            case 4:
+                player4ScoreGroup.setVisibility(View.VISIBLE);
+                player4NameView.setText(playerNameAry[4]);
+            case 3:
+                player3ScoreGroup.setVisibility(View.VISIBLE);
+                player3NameView.setText(playerNameAry[3]);
+            case 2:
+                player2ScoreGroup.setVisibility(View.VISIBLE);
+                player2NameView.setText(playerNameAry[2]);
+            case 1:
+                player1NameView.setText(playerNameAry[1]);
+                break;
         }
     }
 
