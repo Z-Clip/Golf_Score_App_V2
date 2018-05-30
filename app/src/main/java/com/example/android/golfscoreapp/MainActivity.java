@@ -117,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.game_layout_portrait);
                 buildGameObjects();
                 break;
+            case "final":
+                setContentView(R.layout.final_layout_portrait);
+                createFinalObjects();
+                break;
         }
     }
 
@@ -168,6 +172,10 @@ public class MainActivity extends AppCompatActivity {
                     setContentView(R.layout.game_layout_portrait);
                     buildGameObjects();
                     break;
+                case "final":
+                    setContentView(R.layout.final_layout_portrait);
+                    createFinalObjects();
+                    break;
             }
         } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             switch (phase) {
@@ -178,6 +186,10 @@ public class MainActivity extends AppCompatActivity {
                 case "game":
                     setContentView(R.layout.game_layout_portrait);
                     buildGameObjects();
+                    break;
+                case "final":
+                    setContentView(R.layout.final_layout_landscape);
+                    createFinalObjects();
                     break;
             }
         }
@@ -498,6 +510,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void finishRound (View view) {
+        phase = "final";
+        setContentView(R.layout.final_layout_portrait);
+        createFinalObjects();
+    }
+
+    public void backToScorecard (View view){
+        phase = "game";
+        setContentView(R.layout.game_layout_portrait);
+        buildGameObjects();
+    }
+
+    public void createFinalObjects () {}
+
+    public void clearScorecard (View view) {
+        phase = "initial";
+        preserveScoreArrays = false;
+        initialViewState = 1;
+        hole = 1;
+        course = null;
+        playerCount = 1;
+        for (int i = 1 ; i <= 4 ; i++) {
+            playerTeeAry[i] = 2;
+        }
+        for (int i = 1 ; i <= 4 ; i++) {
+            playerNameAry[i] = "Player " + i;
+        }
+        for (int i = 0 ; i <= 4 ; i++) {
+            playerHandicapAry[i] = 0;
+        }
+        courseParAry = null;
+        courseHoleNameAry = null;
+        courseDistanceEasyAry = null;
+        courseDistanceMediumAry = null;
+        courseDistanceHardAry = null;
+        teeColorAry = null;
+        holeCount = 0;
+        player1Score = null;
+        player2Score = null;
+        player3Score = null;
+        player4Score = null;
+        setContentView(R.layout.initial_layout_portrait);
     }
 
     public void player1IncrementScore(View view) {

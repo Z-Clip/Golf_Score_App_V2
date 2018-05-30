@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/initial_layout_background" />
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/initial_header"
+        style="@style/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_header" />
+
+    <Button
+        android:id="@+id/back_to_scorecard"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/clear_scorecard"
+        android:text="@string/back_to_scorecard"
+        android:onClick="backToScorecard"/>
+
+    <Button
+        android:id="@+id/clear_scorecard"
+        style="@style/warning_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/clear_scorecard"
+        android:textColor="@color/White"
+        android:onClick="clearScorecard"/>
+
+</RelativeLayout>
