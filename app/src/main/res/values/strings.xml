@@ -41,9 +41,9 @@
     <string name="complete_round">Finish Round</string>
 
     <string name="par">Par</string>
-    <string name="hard_distance">Hard Tee</string>
-    <string name="medium_distance">Medium Tee</string>
-    <string name="easy_distance">Easy Tee</string>
+    <string name="hard_distance">Hard</string>
+    <string name="medium_distance">Medium</string>
+    <string name="easy_distance">Easy</string>
     <string name="close">Close</string>
 
 </resources>

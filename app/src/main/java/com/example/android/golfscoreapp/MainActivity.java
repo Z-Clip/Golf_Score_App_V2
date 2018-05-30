@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public String course;
     public int playerCount = 1;
     public int[] playerTeeAry = {0, 2, 2, 2, 2};
-    public String[] playerNameAry = {"", "Player 1", "Player 2", "Player 3", "Player 4"};
+    public String[] playerNameAry = {"X", "Player 1", "Player 2", "Player 3", "Player 4"};
     public int[] playerHandicapAry = {0, 0, 0, 0, 0};
     public int[] courseParAry;
     public String[] courseHoleNameAry;
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             courseDistanceHardAry = savedInstanceState.getIntArray("courseDistanceHardAry");
             courseHoleNameAry = savedInstanceState.getStringArray("courseHoleNameAry");
             teeColorAry = savedInstanceState.getStringArray("teeColorAry");
-            holeCount = savedInstanceState.getInt("holeCount)", holeCount);
+            holeCount = savedInstanceState.getInt("holeCount", holeCount);
             player1Score = savedInstanceState.getIntArray("player1Score");
             player2Score = savedInstanceState.getIntArray("player2Score");
             player3Score = savedInstanceState.getIntArray("player3Score");
