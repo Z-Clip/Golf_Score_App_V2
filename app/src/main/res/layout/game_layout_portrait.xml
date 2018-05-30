@@ -38,6 +38,70 @@
 
     </LinearLayout>
 
+    <!-- Hole Info -->
+    <LinearLayout
+        android:id="@+id/hole_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_header"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_background"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hole_par"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/par"
+                android:padding="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/hole_hard_tee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hard_distance"
+                android:padding="2dp"
+                android:background="@color/Red"
+                android:textColor="@color/White"/>
+
+            <TextView
+                android:id="@+id/hole_medium_tee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medium_distance"
+                android:padding="2dp"
+                android:background="@color/Yellow"/>
+            <TextView
+                android:id="@+id/hole_easy_tee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/easy_distance"
+                android:padding="2dp"
+                android:background="@color/White"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/hole_map_small"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/map_icon"
+            android:layout_gravity="center"
+            android:onClick="fullSizeMap"/>
+
+    </LinearLayout>
 
     <!-- Player Scores -->
     <ScrollView
@@ -45,12 +109,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/prev_next_buttons"
+        android:layout_below="@id/hole_information"
         android:layout_margin="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
 
             <!-- Player 1 -->
             <LinearLayout
@@ -171,25 +237,88 @@
         android:id="@+id/prev_next_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/return_and_complete_buttons"
         android:orientation="horizontal">
 
         <Button
-            style="@style/warning_button"
+            style="@style/button_game"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="decrementHole"
-            android:text="@string/previous_hole" />
+            android:text="@string/previous_hole"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="2dp"/>
 
         <Button
-            style="@style/button"
+            style="@style/button_game"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="incrementHole"
-            android:text="@string/next_hole" />
+            android:text="@string/next_hole"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="8dp"/>
 
     </LinearLayout>
+
+    <!-- Return And Complete Round Button -->
+    <LinearLayout
+        android:id="@+id/return_and_complete_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/warning_button_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="returnToPlayerInfo"
+            android:text="@string/return_to_player_selection"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="2dp"/>
+
+        <Button
+            style="@style/warning_button_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="finishRound"
+            android:text="@string/complete_round"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/full_screen_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/text_view_background"
+        android:layout_above="@id/close_button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/map_icon"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/close_button"
+        style="@style/close_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/close"
+        android:onClick="closeFullMap"/>
 
 </RelativeLayout>

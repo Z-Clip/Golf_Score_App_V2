@@ -2,6 +2,8 @@ package com.example.android.golfscoreapp;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public int[] player2Score;
     public int[] player3Score;
     public int[] player4Score;
+    public boolean preserveScoreArrays = false;
 
     //Global object variables
     public ScrollView coursesViewGroup;
@@ -64,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
     public TextView player2ScoreView;
     public TextView player3ScoreView;
     public TextView player4ScoreView;
+    public TextView holePar;
+    public TextView holeHardTeeDistance;
+    public TextView holeMediumTeeDistance;
+    public TextView holeEasyTeeDistance;
+    public ImageView holeMap;
+    public TextView hardTeeColor;
+    public TextView mediumTeeColor;
+    public TextView easyTeeColor;
+    public ImageView fullSizeMap;
+    public Button closeMap;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -234,6 +247,7 @@ public class MainActivity extends AppCompatActivity {
         playerCountViewGroup.setVisibility(View.GONE);
         playerInfoViewGroup.setVisibility(View.GONE);
         beginRoundViewGroup.setVisibility(View.GONE);
+        preserveScoreArrays = false;
         courseParAry = null;
         courseDistanceEasyAry = null;
         courseDistanceMediumAry = null;
@@ -334,16 +348,18 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         }
-        switch (playerCount) {
-            case 4:
-                player4Score = new int[holeCount + 1];
-            case 3:
-                player3Score = new int[holeCount + 1];
-            case 2:
-                player2Score = new int[holeCount + 1];
-            case 1:
-                player1Score = new int[holeCount + 1];
-                break;
+        if (!preserveScoreArrays) {
+            switch (playerCount) {
+                case 4:
+                    player4Score = new int[holeCount + 1];
+                case 3:
+                    player3Score = new int[holeCount + 1];
+                case 2:
+                    player2Score = new int[holeCount + 1];
+                case 1:
+                    player1Score = new int[holeCount + 1];
+                    break;
+            }
         }
         saveEditTextVars();
         phase = "game";
@@ -351,13 +367,25 @@ public class MainActivity extends AppCompatActivity {
         buildGameObjects();
     }
 
+    public void returnToPlayerInfo (View view) {
+        phase = "initial";
+        preserveScoreArrays = true;
+        setContentView(R.layout.initial_layout_portrait);
+        afterCourseSelection();
+        buildInitialObjects();
+    }
+
+    public void finishRound (View view) {
+    }
+
     public void setCourseArrays() {
-        courseParAry = getResources().getIntArray(getResources().getIdentifier(course + "_par", "array", getPackageName()));
-        courseDistanceEasyAry = getResources().getIntArray(getResources().getIdentifier(course + "_distance_0", "array", getPackageName()));
-        courseDistanceMediumAry = getResources().getIntArray(getResources().getIdentifier(course + "_distance_1", "array", getPackageName()));
-        courseDistanceHardAry = getResources().getIntArray(getResources().getIdentifier(course + "_distance_2", "array", getPackageName()));
-        courseHoleNameAry = getResources().getStringArray(getResources().getIdentifier(course + "_hole_names", "array", getPackageName()));
-        teeColorAry = getResources().getStringArray(getResources().getIdentifier("sa_tees", "array", getPackageName()));
+        Resources resource = getResources();
+        courseParAry = resource.getIntArray(resource.getIdentifier(course + "_par", "array", getPackageName()));
+        courseDistanceEasyAry = resource.getIntArray(resource.getIdentifier(course + "_distance_0", "array", getPackageName()));
+        courseDistanceMediumAry = resource.getIntArray(resource.getIdentifier(course + "_distance_1", "array", getPackageName()));
+        courseDistanceHardAry = resource.getIntArray(resource.getIdentifier(course + "_distance_2", "array", getPackageName()));
+        courseHoleNameAry = resource.getStringArray(resource.getIdentifier(course + "_hole_names", "array", getPackageName()));
+        teeColorAry = resource.getStringArray(resource.getIdentifier("sa_tees", "array", this.getPackageName()));
         holeCount = courseParAry.length - 1;
     }
 
@@ -376,6 +404,13 @@ public class MainActivity extends AppCompatActivity {
         player2ScoreView = findViewById(R.id.player_2_score_score);
         player3ScoreView = findViewById(R.id.player_3_score_score);
         player4ScoreView = findViewById(R.id.player_4_score_score);
+        holePar = findViewById(R.id.hole_par);
+        holeHardTeeDistance = findViewById(R.id.hole_hard_tee);
+        holeMediumTeeDistance = findViewById(R.id.hole_medium_tee);
+        holeEasyTeeDistance = findViewById(R.id.hole_easy_tee);
+        holeMap = findViewById(R.id.hole_map_small);
+        fullSizeMap = findViewById(R.id.full_screen_map);
+        closeMap = findViewById(R.id.close_button);
         setGameObjects();
     }
 
@@ -391,6 +426,16 @@ public class MainActivity extends AppCompatActivity {
             gameHoleNumberView.setTextSize(20);
             gameHoleNameView.setTextSize(20);
         }
+        String par = "Par " + String.valueOf(courseParAry[hole]);
+        holePar.setText(par);
+        String hardTeeDistance = String.valueOf(courseDistanceHardAry[hole]) + " Yards";
+        holeHardTeeDistance.setText(hardTeeDistance);
+        String mediumTeeDistance = String.valueOf(courseDistanceMediumAry[hole]) + " Yards";
+        holeMediumTeeDistance.setText(mediumTeeDistance);
+        String easyTeeDistance = String.valueOf(courseDistanceEasyAry[hole]) + " Yards";
+        holeEasyTeeDistance.setText(easyTeeDistance);
+        holeMap.setImageResource(getResources().getIdentifier("com.example.android.golfscoreapp:drawable/" + course + "_map_hole_" + hole, null, null));
+        fullSizeMap.setImageResource(getResources().getIdentifier("com.example.android.golfscoreapp:drawable/" + course + "_map_hole_" + hole, null, null));
         switch (playerCount) {
             case 4:
                 player4ScoreGroup.setVisibility(View.VISIBLE);
@@ -443,6 +488,16 @@ public class MainActivity extends AppCompatActivity {
             hole = holeCount;
         }
         setGameObjects();
+    }
+
+    public void fullSizeMap (View view) {
+        fullSizeMap.setVisibility(View.VISIBLE);
+        closeMap.setVisibility(View.VISIBLE);
+    }
+
+    public void closeFullMap (View view) {
+        fullSizeMap.setVisibility(View.GONE);
+        closeMap.setVisibility(View.GONE);
     }
 
     public void player1IncrementScore(View view) {

@@ -1,6 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="sa_tees">
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Red</item>
+    </string-array>
+
+    <string-array name="sa_old_hole_names">
+        <item></item>
+        <item>Burn</item> <!-- 1 -->
+        <item>Dyke</item> <!-- 2 -->
+        <item>Cartgate (Out)</item> <!-- 3 -->
+        <item>Ginger Beer</item> <!-- 4 -->
+        <item>Hole O'Cross (Out)</item> <!-- 5 -->
+        <item>Heathery (Out)</item> <!-- 6 -->
+        <item>High (Out)</item> <!-- 7 -->
+        <item>Short</item> <!-- 8 -->
+        <item>End</item> <!-- 9 -->
+        <item>Bobby Jones</item> <!-- 10 -->
+        <item>High (In)</item> <!-- 11 -->
+        <item>Heathery (In)</item> <!-- 12 -->
+        <item>Hole O'Cross (In)</item> <!-- 13 -->
+        <item>Long</item> <!-- 14 -->
+        <item>Cartgate (In)</item> <!-- 15 -->
+        <item>Corner of the Dyke</item> <!-- 16 -->
+        <item>Road</item> <!-- 17 -->
+        <item>Tom Morris</item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_castle_hole_names">
+        <item></item>
+        <item>Ford</item> <!-- 1 -->
+        <item>St Rule</item> <!-- 2 -->
+        <item>Cathedral</item> <!-- 3 -->
+        <item>Briery Hill</item> <!-- 4 -->
+        <item>Brownhills</item> <!-- 5 -->
+        <item>Pier</item> <!-- 6 -->
+        <item>Maiden Rock</item> <!-- 7 -->
+        <item>Cave</item> <!-- 8 -->
+        <item>Kinkell Ness</item> <!-- 9 -->
+        <item>Horseshoe</item> <!-- 10 -->
+        <item>Maiden Pinks</item> <!-- 11 -->
+        <item>Boar's Chase</item> <!-- 12 -->
+        <item>High</item> <!-- 13 -->
+        <item>Covenanters</item> <!-- 14 -->
+        <item>Spinkston</item> <!-- 15 -->
+        <item>Craigendaff</item> <!-- 16 -->
+        <item>Braes</item> <!-- 17 -->
+        <item>Rock and Spindle</item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_new_hole_names">
+        <item></item>
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_jubilee_hole_names">
+        <item></item>
+        <item>Willie Auchterlonie</item> <!-- 1 -->
+        <item>Whinny Knowe</item> <!-- 2 -->
+        <item>The Skelp</item> <!-- 3 -->
+        <item>Crossgate</item> <!-- 4 -->
+        <item>Hackie's Barra'</item> <!-- 5 -->
+        <item>Playfair</item> <!-- 6 -->
+        <item>Ayton</item> <!-- 7 -->
+        <item>Eden's Edge</item> <!-- 8 -->
+        <item>Windy Tap</item> <!-- 9 -->
+        <item>Spires</item> <!-- 10 -->
+        <item>Treble-One</item> <!-- 11 -->
+        <item>The Butts</item> <!-- 12 -->
+        <item>Hale Bopp</item> <!-- 13 -->
+        <item>Willie Whitelaw</item> <!-- 14 -->
+        <item>Steel's Gem</item> <!-- 15 -->
+        <item>Freddie Tait</item> <!-- 16 -->
+        <item>Ladyhead</item> <!-- 17 -->
+        <item>Honeyman's Howe</item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_eden_hole_names">
+        <item></item>
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_strathtyrum_hole_names">
+        <item></item>
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+        <item></item> <!-- 10 -->
+        <item></item> <!-- 11 -->
+        <item></item> <!-- 12 -->
+        <item></item> <!-- 13 -->
+        <item></item> <!-- 14 -->
+        <item></item> <!-- 15 -->
+        <item></item> <!-- 16 -->
+        <item></item> <!-- 17 -->
+        <item></item> <!-- 18 -->
+    </string-array>
+
+    <string-array name="sa_balgove_hole_names">
+        <item></item>
+        <item></item> <!-- 1 -->
+        <item></item> <!-- 2 -->
+        <item></item> <!-- 3 -->
+        <item></item> <!-- 4 -->
+        <item></item> <!-- 5 -->
+        <item></item> <!-- 6 -->
+        <item></item> <!-- 7 -->
+        <item></item> <!-- 8 -->
+        <item></item> <!-- 9 -->
+     </string-array>
+
     <!-- Par arrays -->
     <integer-array
         name="sa_old_par">
@@ -157,7 +308,7 @@
 
     <!-- Distance Arrays -->
     <integer-array
-        name="sa_castle_distance_0">
+        name="sa_castle_distance_2">
         <item>0</item>
         <item>346</item> <!-- 1 -->
         <item>404</item> <!-- 2 -->
@@ -203,7 +354,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_castle_distance_2">
+        name="sa_castle_distance_0">
         <item>0</item>
         <item>300</item> <!-- 1 -->
         <item>344</item> <!-- 2 -->
@@ -226,7 +377,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_old_distance_0">
+        name="sa_old_distance_2">
         <item>0</item>
         <item>376</item> <!-- 1 -->
         <item>411</item> <!-- 2 -->
@@ -272,7 +423,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_old_distance_2">
+        name="sa_old_distance_0">
         <item>0</item>
         <item>339</item> <!-- 1 -->
         <item>375</item> <!-- 2 -->
@@ -295,7 +446,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_new_distance_0">
+        name="sa_new_distance_2">
         <item>0</item>
         <item>336</item> <!-- 1 -->
         <item>367</item> <!-- 2 -->
@@ -341,7 +492,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_new_distance_2">
+        name="sa_new_distance_0">
         <item>0</item>
         <item>282</item> <!-- 1 -->
         <item>356</item> <!-- 2 -->
@@ -364,7 +515,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_jubilee_distance_0">
+        name="sa_jubilee_distance_2">
         <item>0</item>
         <item>367</item> <!-- 1 -->
         <item>360</item> <!-- 2 -->
@@ -410,7 +561,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_jubilee_distance_2">
+        name="sa_jubilee_distance_0">
         <item>0</item>
         <item>318</item> <!-- 1 -->
         <item>271</item> <!-- 2 -->
@@ -433,7 +584,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_eden_distance_0">
+        name="sa_eden_distance_2">
         <item>0</item>
         <item>326</item> <!-- 1 -->
         <item>449</item> <!-- 2 -->
@@ -479,7 +630,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_eden_distance_2">
+        name="sa_eden_distance_0">
         <item>0</item>
         <item>270</item> <!-- 1 -->
         <item>438</item> <!-- 2 -->
@@ -502,7 +653,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_strathtyrum_distance_0">
+        name="sa_strathtyrum_distance_2">
         <item>0</item>
         <item>332</item> <!-- 1 -->
         <item>350</item> <!-- 2 -->
@@ -548,7 +699,7 @@
     </integer-array>
 
     <integer-array
-        name="sa_strathtyrum_distance_2">
+        name="sa_strathtyrum_distance_0">
         <item>0</item>
         <item>315</item> <!-- 1 -->
         <item>312</item> <!-- 2 -->

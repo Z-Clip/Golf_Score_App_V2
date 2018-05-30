@@ -160,4 +160,38 @@
         <item name="android:layout_margin">4dp</item>
     </style>
 
+    <style name="button_game">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="warning_button_game">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/button_background_warning</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="close_button">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/close_button_background</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="hole_information">
+        <item name="android:background">@drawable/button_background_warning</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>
