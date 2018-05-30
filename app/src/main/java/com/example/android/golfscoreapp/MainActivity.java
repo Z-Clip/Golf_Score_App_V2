@@ -375,9 +375,6 @@ public class MainActivity extends AppCompatActivity {
         buildInitialObjects();
     }
 
-    public void finishRound (View view) {
-    }
-
     public void setCourseArrays() {
         Resources resource = getResources();
         courseParAry = resource.getIntArray(resource.getIdentifier(course + "_par", "array", getPackageName()));
@@ -498,6 +495,9 @@ public class MainActivity extends AppCompatActivity {
     public void closeFullMap (View view) {
         fullSizeMap.setVisibility(View.GONE);
         closeMap.setVisibility(View.GONE);
+    }
+
+    public void finishRound (View view) {
     }
 
     public void player1IncrementScore(View view) {
