@@ -49,4 +49,8 @@
     <string name="clear_scorecard">Clear Scorecard and Reset App</string>
     <string name="back_to_scorecard">Back To Scorecard</string>
 
+    <string name="par_so_far">Par So Far</string>
+    <string name="score">Stroke Count</string>
+    <string name="player_tee">Playing From</string>
+
 </resources>
