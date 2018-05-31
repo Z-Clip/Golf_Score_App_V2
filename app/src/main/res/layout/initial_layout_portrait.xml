@@ -206,12 +206,14 @@
                     <EditText
                         android:id="@+id/player_1_name"
                         style="@style/player_name"
-                        android:text="@string/player_1" />
+                        android:text="@string/player_1"
+                        android:hint="@string/player_name"/>
 
                     <EditText
                         android:id="@+id/player_1_handicap"
                         style="@style/player_handicap"
-                        android:text="0" />
+                        android:text="@string/zero"
+                        android:hint="@string/handicap"/>
 
                     <RadioGroup
                         android:id="@+id/player_1_tee_group"
@@ -293,12 +295,14 @@
                     <EditText
                         android:id="@+id/player_2_name"
                         style="@style/player_name"
-                        android:text="@string/player_2" />
+                        android:text="@string/player_2"
+                        android:hint="@string/player_name"/>
 
                     <EditText
                         android:id="@+id/player_2_handicap"
                         style="@style/player_handicap"
-                        android:text="0" />
+                        android:text="@string/zero"
+                        android:hint="@string/handicap"/>
 
                     <RadioGroup
                         android:id="@+id/player_2_tee_group"
@@ -380,12 +384,14 @@
                     <EditText
                         android:id="@+id/player_3_name"
                         style="@style/player_name"
-                        android:text="@string/player_3" />
+                        android:text="@string/player_3"
+                        android:hint="@string/player_name"/>
 
                     <EditText
                         android:id="@+id/player_3_handicap"
                         style="@style/player_handicap"
-                        android:text="0" />
+                        android:text="@string/zero"
+                        android:hint="@string/handicap"/>
 
                     <RadioGroup
                         android:id="@+id/player_3_tee_group"
@@ -467,12 +473,14 @@
                     <EditText
                         android:id="@+id/player_4_name"
                         style="@style/player_name"
-                        android:text="@string/player_4" />
+                        android:text="@string/player_4"
+                        android:hint="@string/zero"/>
 
                     <EditText
                         android:id="@+id/player_4_handicap"
                         style="@style/player_handicap"
-                        android:text="0" />
+                        android:text="@string/zero"
+                        android:hint="@string/handicap"/>
 
                     <RadioGroup
                         android:id="@+id/player_4_tee_group"
