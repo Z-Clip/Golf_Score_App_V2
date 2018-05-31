@@ -23,7 +23,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/back_to_scorecard"
+        android:layout_above="@id/final_buttons"
         android:layout_below="@id/final_header">
 
         <!-- Container Layout -->
@@ -356,24 +356,34 @@
     </ScrollView>
 
     <!-- Return to Scorecard Button -->
-    <Button
-        android:id="@+id/back_to_scorecard"
-        style="@style/button"
+    <LinearLayout
+        android:id="@+id/final_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/clear_scorecard"
-        android:onClick="backToScorecard"
-        android:text="@string/back_to_scorecard" />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
-    <!-- Reset Button -->
-    <Button
-        android:id="@+id/clear_scorecard"
-        style="@style/warning_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:onClick="clearScorecard"
-        android:text="@string/clear_scorecard"
-        android:textColor="@color/White" />
+        <Button
+            android:id="@+id/back_to_scorecard"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="backToScorecard"
+            android:text="@string/back_to_scorecard" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/clear_scorecard"
+            style="@style/warning_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="clearScorecard"
+            android:text="@string/clear_scorecard"
+            android:textColor="@color/White"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
