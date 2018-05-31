@@ -1,15 +1,11 @@
 package com.example.android.golfscoreapp;
 
-import android.content.Context;
+
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
