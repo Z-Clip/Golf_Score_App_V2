@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/score_header"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <!-- Hole Info -->
         <LinearLayout
@@ -111,7 +112,8 @@
                 android:gravity="center"
                 android:onClick="fullSizeMap"
                 android:scaleType="fitCenter"
-                android:src="@drawable/map_icon" />
+                android:src="@drawable/map_icon"
+                android:contentDescription="@string/map_image_content_description"/>
 
             <!-- Next and Previous Buttons -->
             <LinearLayout
@@ -186,7 +188,7 @@
                         <TextView
                             android:id="@+id/player_1_score_score"
                             style="@style/player_score_score"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <Button
                             style="@style/player_score_add_button"
@@ -214,7 +216,7 @@
                         <TextView
                             android:id="@+id/player_2_score_score"
                             style="@style/player_score_score"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <Button
                             style="@style/player_score_add_button"
@@ -242,7 +244,7 @@
                         <TextView
                             android:id="@+id/player_3_score_score"
                             style="@style/player_score_score"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <Button
                             style="@style/player_score_add_button"
@@ -270,7 +272,7 @@
                         <TextView
                             android:id="@+id/player_4_score_score"
                             style="@style/player_score_score"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <Button
                             style="@style/player_score_add_button"
@@ -332,7 +334,8 @@
         android:background="@drawable/text_view_background"
         android:scaleType="centerInside"
         android:src="@drawable/map_icon"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/map_image_content_description"/>
 
     <!-- Expanded Map Close Button -->
     <Button

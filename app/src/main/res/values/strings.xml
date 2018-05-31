@@ -29,7 +29,8 @@
     <string name="medium_tee_color">Yellow</string>
     <string name="easy_tee_color">White</string>
 
-    <string name="background_image_content_description">background_image</string>
+    <string name="background_image_content_description">background image</string>
+    <string name="map_image_content_description">map image</string>
     <string name="default_player_count">1</string>
 
     <string name="hole_number">Hole 1</string>

@@ -99,7 +99,8 @@
             android:scaleType="fitCenter"
             android:src="@drawable/map_icon"
             android:gravity="center"
-            android:onClick="fullSizeMap"/>
+            android:onClick="fullSizeMap"
+            android:contentDescription="@string/map_image_content_description"/>
 
     </LinearLayout>
 
@@ -136,7 +137,7 @@
                 <TextView
                     android:id="@+id/player_1_score_score"
                     style="@style/player_score_score"
-                    android:text="0" />
+                    android:text="@string/zero" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -163,7 +164,7 @@
                 <TextView
                     android:id="@+id/player_2_score_score"
                     style="@style/player_score_score"
-                    android:text="0" />
+                    android:text="@string/zero" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -191,7 +192,7 @@
                 <TextView
                     android:id="@+id/player_3_score_score"
                     style="@style/player_score_score"
-                    android:text="0" />
+                    android:text="@string/zero" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -219,7 +220,7 @@
                 <TextView
                     android:id="@+id/player_4_score_score"
                     style="@style/player_score_score"
-                    android:text="0" />
+                    android:text="@string/zero" />
 
                 <Button
                     style="@style/player_score_add_button"
@@ -306,7 +307,8 @@
         android:layout_marginTop="8dp"
         android:src="@drawable/map_icon"
         android:scaleType="centerInside"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/map_image_content_description"/>
 
     <Button
         android:visibility="gone"
