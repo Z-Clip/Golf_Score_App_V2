@@ -51,7 +51,8 @@
                     style="@style/final_layout_player_info_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <!-- Par So Far -->
                     <LinearLayout
@@ -67,7 +68,7 @@
                         <TextView
                             android:id="@+id/player_1_par_so_far"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -85,7 +86,7 @@
                         <TextView
                             android:id="@+id/player_1_stroke_count"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -103,7 +104,7 @@
                         <TextView
                             android:id="@+id/player_1_tee"
                             style="@style/final_layout_player_info_text"
-                            android:text="X" />
+                            android:text="@string/X" />
 
                     </LinearLayout>
 
@@ -131,7 +132,8 @@
                     style="@style/final_layout_player_info_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <!-- Par So Far -->
                     <LinearLayout
@@ -147,7 +149,7 @@
                         <TextView
                             android:id="@+id/player_2_par_so_far"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -165,7 +167,7 @@
                         <TextView
                             android:id="@+id/player_2_stroke_count"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -183,7 +185,7 @@
                         <TextView
                             android:id="@+id/player_2_tee"
                             style="@style/final_layout_player_info_text"
-                            android:text="X" />
+                            android:text="@string/X" />
 
                     </LinearLayout>
 
@@ -211,7 +213,8 @@
                     style="@style/final_layout_player_info_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <!-- Par So Far -->
                     <LinearLayout
@@ -227,7 +230,7 @@
                         <TextView
                             android:id="@+id/player_3_par_so_far"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -245,7 +248,7 @@
                         <TextView
                             android:id="@+id/player_3_stroke_count"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -263,7 +266,7 @@
                         <TextView
                             android:id="@+id/player_3_tee"
                             style="@style/final_layout_player_info_text"
-                            android:text="X" />
+                            android:text="@string/X" />
 
                     </LinearLayout>
 
@@ -291,7 +294,8 @@
                     style="@style/final_layout_player_info_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <!-- Par So Far -->
                     <LinearLayout
@@ -307,7 +311,7 @@
                         <TextView
                             android:id="@+id/player_4_par_so_far"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -325,7 +329,7 @@
                         <TextView
                             android:id="@+id/player_4_stroke_count"
                             style="@style/final_layout_player_info_text"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                     </LinearLayout>
 
@@ -343,7 +347,7 @@
                         <TextView
                             android:id="@+id/player_4_tee"
                             style="@style/final_layout_player_info_text"
-                            android:text="X" />
+                            android:text="@string/X" />
 
                     </LinearLayout>
 

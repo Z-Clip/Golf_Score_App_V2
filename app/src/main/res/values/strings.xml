@@ -52,5 +52,7 @@
     <string name="par_so_far">Par So Far</string>
     <string name="score">Stroke Count</string>
     <string name="player_tee">Playing From</string>
+    <string name="zero">0</string>
+    <string name="X">X</string>
 
 </resources>
