@@ -72,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public TextView holeMediumTeeDistance;
     public TextView holeEasyTeeDistance;
     public ImageView holeMap;
-    public TextView hardTeeColor;
-    public TextView mediumTeeColor;
-    public TextView easyTeeColor;
     public ImageView fullSizeMap;
     public Button closeMap;
 
@@ -184,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     buildInitialObjects();
                     break;
                 case "game":
-                    setContentView(R.layout.game_layout_portrait);
+                    setContentView(R.layout.game_layout_landscape);
                     buildGameObjects();
                     break;
                 case "final":
@@ -551,6 +548,7 @@ public class MainActivity extends AppCompatActivity {
         player3Score = null;
         player4Score = null;
         setContentView(R.layout.initial_layout_portrait);
+        buildInitialObjects();
     }
 
     public void player1IncrementScore(View view) {

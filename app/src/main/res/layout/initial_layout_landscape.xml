@@ -218,7 +218,7 @@
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_1_tee_2"
+                            android:id="@+id/player_1_tee_0"
                             style="@style/player_tee_radio_button"
                             android:background="@color/Red"
                             android:onClick="setPlayerTee"
@@ -232,7 +232,7 @@
                             android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_1_tee_0"
+                            android:id="@+id/player_1_tee_2"
                             style="@style/player_tee_radio_button"
                             android:background="@color/White"
                             android:onClick="setPlayerTee"
@@ -305,7 +305,7 @@
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_2_tee_2"
+                            android:id="@+id/player_2_tee_0"
                             style="@style/player_tee_radio_button"
                             android:background="@color/Red"
                             android:onClick="setPlayerTee"
@@ -319,7 +319,7 @@
                             android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_2_tee_0"
+                            android:id="@+id/player_2_tee_2"
                             style="@style/player_tee_radio_button"
                             android:background="@color/White"
                             android:onClick="setPlayerTee"
@@ -392,7 +392,7 @@
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_3_tee_2"
+                            android:id="@+id/player_3_tee_0"
                             style="@style/player_tee_radio_button"
                             android:background="@color/Red"
                             android:onClick="setPlayerTee"
@@ -406,7 +406,7 @@
                             android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_3_tee_0"
+                            android:id="@+id/player_3_tee_2"
                             style="@style/player_tee_radio_button"
                             android:background="@color/White"
                             android:onClick="setPlayerTee"
@@ -479,7 +479,7 @@
                         style="@style/player_tee_radio_group">
 
                         <RadioButton
-                            android:id="@+id/player_4_tee_2"
+                            android:id="@+id/player_4_tee_0"
                             style="@style/player_tee_radio_button"
                             android:background="@color/Red"
                             android:onClick="setPlayerTee"
@@ -493,7 +493,7 @@
                             android:text="@string/medium_tee_color" />
 
                         <RadioButton
-                            android:id="@+id/player_4_tee_0"
+                            android:id="@+id/player_4_tee_2"
                             style="@style/player_tee_radio_button"
                             android:background="@color/White"
                             android:onClick="setPlayerTee"

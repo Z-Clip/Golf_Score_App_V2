@@ -71,8 +71,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hard_distance"
                 android:padding="2dp"
-                android:background="@color/Red"
-                android:textColor="@color/White"/>
+                android:background="@color/White" />
 
             <TextView
                 android:id="@+id/hole_medium_tee"
@@ -87,7 +86,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/easy_distance"
                 android:padding="2dp"
-                android:background="@color/White"/>
+                android:background="@color/Red"
+                android:textColor="@color/White"/>
 
         </LinearLayout>
 
