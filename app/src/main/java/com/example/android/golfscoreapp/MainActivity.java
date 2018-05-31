@@ -246,13 +246,14 @@ public class MainActivity extends AppCompatActivity {
                         playerTwoInfoView.setVisibility(View.VISIBLE);
                         playerThreeInfoView.setVisibility(View.VISIBLE);
                         setEditTextViewText();
+                        break;
                     case 4:
                         playerTwoInfoView.setVisibility(View.VISIBLE);
                         playerThreeInfoView.setVisibility(View.VISIBLE);
                         playerFourInfoView.setVisibility(View.VISIBLE);
                         setEditTextViewText();
+                        break;
                 }
-                break;
         }
     }
 
