@@ -38,7 +38,7 @@
     <string name="next_hole">Next Hole</string>
     <string name="previous_hole">Previous Hole</string>
     <string name="return_to_player_selection">Player Info</string>
-    <string name="complete_round">Finish Round</string>
+    <string name="complete_round">Scores</string>
 
     <string name="par">Par</string>
     <string name="hard_distance">Hard</string>

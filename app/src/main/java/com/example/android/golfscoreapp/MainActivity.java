@@ -74,6 +74,26 @@ public class MainActivity extends AppCompatActivity {
     public ImageView holeMap;
     public ImageView fullSizeMap;
     public Button closeMap;
+    public LinearLayout finalPlayer1Info;
+    public LinearLayout finalPlayer2Info;
+    public LinearLayout finalPlayer3Info;
+    public LinearLayout finalPlayer4Info;
+    public TextView finalPlayer1Name;
+    public TextView finalPlayer2Name;
+    public TextView finalPlayer3Name;
+    public TextView finalPlayer4Name;
+    public TextView finalPlayer1ParSoFar;
+    public TextView finalPlayer2ParSoFar;
+    public TextView finalPlayer3ParSoFar;
+    public TextView finalPlayer4ParSoFar;
+    public TextView finalPlayer1StrokeCount;
+    public TextView finalPlayer2StrokeCount;
+    public TextView finalPlayer3StrokeCount;
+    public TextView finalPlayer4StrokeCount;
+    public TextView finalPlayer1Tee;
+    public TextView finalPlayer2Tee;
+    public TextView finalPlayer3Tee;
+    public TextView finalPlayer4Tee;
 
     // Save off key global variables on saveInstanceState
     @Override
@@ -518,7 +538,99 @@ public class MainActivity extends AppCompatActivity {
         buildGameObjects();
     }
 
-    public void createFinalObjects () {}
+    public void createFinalObjects () {
+        switch (playerCount) {
+            case 4:
+                finalPlayer4Info = findViewById(R.id.final_player_4_info);
+                finalPlayer4Info.setVisibility(View.VISIBLE);
+                finalPlayer4Name = findViewById(R.id.final_player_4_name);
+                finalPlayer4Name.setText(playerNameAry[4]);
+                int parSoFar4 = 0;
+                for (int i = 1 ; i < courseParAry.length ; i++) {
+                    if (player4Score[i] > 0) {
+                        parSoFar4 = parSoFar4 + courseParAry[i];
+                    }
+                }
+                finalPlayer4ParSoFar = findViewById(R.id.player_4_par_so_far);
+                finalPlayer4ParSoFar.setText(String.valueOf(parSoFar4));
+                finalPlayer4StrokeCount = findViewById(R.id.player_4_stroke_count);
+                int strokes4 = 0;
+                for (int i = 1 ; i < player4Score.length ; i++) {
+                    strokes4 = player4Score[i] + strokes4;
+                }
+                finalPlayer4StrokeCount.setText(String.valueOf(strokes4));
+                finalPlayer4Tee = findViewById(R.id.player_4_tee);
+                String tee4 = teeColorAry[playerTeeAry[4]];
+                finalPlayer4Tee.setText(tee4);
+            case 3:
+                finalPlayer3Info = findViewById(R.id.final_player_3_info);
+                finalPlayer3Info.setVisibility(View.VISIBLE);
+                finalPlayer3Name = findViewById(R.id.final_player_3_name);
+                finalPlayer3Name.setText(playerNameAry[3]);
+                int parSoFar3 = 0;
+                for (int i = 1 ; i < courseParAry.length ; i++) {
+                    if (player3Score[i] > 0) {
+                        parSoFar3 = parSoFar3 + courseParAry[i];
+                    }
+                }
+                finalPlayer3ParSoFar = findViewById(R.id.player_3_par_so_far);
+                finalPlayer3ParSoFar.setText(String.valueOf(parSoFar3));
+                finalPlayer3StrokeCount = findViewById(R.id.player_3_stroke_count);
+                int strokes3 = 0;
+                for (int i = 1 ; i < player3Score.length ; i++) {
+                    strokes3 = player3Score[i] + strokes3;
+                }
+                finalPlayer3StrokeCount.setText(String.valueOf(strokes3));
+                finalPlayer3Tee = findViewById(R.id.player_3_tee);
+                String tee3 = teeColorAry[playerTeeAry[3]];
+                finalPlayer3Tee.setText(tee3);
+            case 2:
+                finalPlayer2Info = findViewById(R.id.final_player_2_info);
+                finalPlayer2Info.setVisibility(View.VISIBLE);
+                finalPlayer2Name = findViewById(R.id.final_player_2_name);
+                finalPlayer2Name.setText(playerNameAry[2]);
+                int parSoFar2 = 0;
+                for (int i = 1 ; i < courseParAry.length ; i++) {
+                    if (player2Score[i] > 0) {
+                        parSoFar2 = parSoFar2 + courseParAry[i];
+                    }
+                }
+                finalPlayer2ParSoFar = findViewById(R.id.player_2_par_so_far);
+                finalPlayer2ParSoFar.setText(String.valueOf(parSoFar2));
+                finalPlayer2StrokeCount = findViewById(R.id.player_2_stroke_count);
+                int strokes2 = 0;
+                for (int i = 1 ; i < player2Score.length ; i++) {
+                    strokes2 = player2Score[i] + strokes2;
+                }
+                finalPlayer2StrokeCount.setText(String.valueOf(strokes2));
+                finalPlayer2Tee = findViewById(R.id.player_2_tee);
+                String tee2 = teeColorAry[playerTeeAry[2]];
+                finalPlayer2Tee.setText(tee2);
+            case 1:
+                finalPlayer1Info = findViewById(R.id.final_player_1_info);
+                finalPlayer1Info.setVisibility(View.VISIBLE);
+                finalPlayer1Name = findViewById(R.id.final_player_1_name);
+                finalPlayer1Name.setText(playerNameAry[1]);
+                int parSoFar1 = 0;
+                for (int i = 1 ; i < courseParAry.length ; i++) {
+                    if (player1Score[i] > 0) {
+                        parSoFar1 = parSoFar1 + courseParAry[i];
+                    }
+                }
+                finalPlayer1ParSoFar = findViewById(R.id.player_1_par_so_far);
+                finalPlayer1ParSoFar.setText(String.valueOf(parSoFar1));
+                finalPlayer1StrokeCount = findViewById(R.id.player_1_stroke_count);
+                int strokes1 = 0;
+                for (int i = 1 ; i < player1Score.length ; i++) {
+                    strokes1 = player1Score[i] + strokes1;
+                }
+                finalPlayer1StrokeCount.setText(String.valueOf(strokes1));
+                finalPlayer1Tee = findViewById(R.id.player_1_tee);
+                String tee1 = teeColorAry[playerTeeAry[1]];
+                finalPlayer1Tee.setText(tee1);
+                break;
+        }
+    }
 
     public void clearScorecard (View view) {
         phase = "initial";

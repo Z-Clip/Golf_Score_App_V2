@@ -1,7 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/initial_layout_background" />
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/final_header"
+        style="@style/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_header" />
+
+    <!-- Player Info -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/back_to_scorecard"
+        android:layout_below="@id/final_header">
+
+        <!-- Container Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <!-- Player 1 -->
+            <LinearLayout
+                android:id="@+id/final_player_1_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/final_player_1_name"
+                    style="@style/final_layout_player_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_1" />
+
+                <LinearLayout
+                    style="@style/final_layout_player_info_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Par So Far -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/par_so_far" />
+
+                        <TextView
+                            android:id="@+id/player_1_par_so_far"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Stroke Count -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/score" />
+
+                        <TextView
+                            android:id="@+id/player_1_stroke_count"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Tee -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/player_tee" />
+
+                        <TextView
+                            android:id="@+id/player_1_tee"
+                            style="@style/final_layout_player_info_text"
+                            android:text="X" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 2 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/final_player_2_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/final_player_2_name"
+                    style="@style/final_layout_player_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/player_2" />
+
+                <LinearLayout
+                    style="@style/final_layout_player_info_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Par So Far -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/par_so_far" />
+
+                        <TextView
+                            android:id="@+id/player_2_par_so_far"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Stroke Count -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/score" />
+
+                        <TextView
+                            android:id="@+id/player_2_stroke_count"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Tee -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/player_tee" />
+
+                        <TextView
+                            android:id="@+id/player_2_tee"
+                            style="@style/final_layout_player_info_text"
+                            android:text="X" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 3 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/final_player_3_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/final_player_3_name"
+                    style="@style/final_layout_player_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/player_3" />
+
+                <LinearLayout
+                    style="@style/final_layout_player_info_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Par So Far -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/par_so_far" />
+
+                        <TextView
+                            android:id="@+id/player_3_par_so_far"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Stroke Count -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/score" />
+
+                        <TextView
+                            android:id="@+id/player_3_stroke_count"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Tee -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/player_tee" />
+
+                        <TextView
+                            android:id="@+id/player_3_tee"
+                            style="@style/final_layout_player_info_text"
+                            android:text="X" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Player 4 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/final_player_4_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/final_player_4_name"
+                    style="@style/final_layout_player_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/player_4" />
+
+                <LinearLayout
+                    style="@style/final_layout_player_info_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Par So Far -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/par_so_far" />
+
+                        <TextView
+                            android:id="@+id/player_4_par_so_far"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Stroke Count -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/score" />
+
+                        <TextView
+                            android:id="@+id/player_4_stroke_count"
+                            style="@style/final_layout_player_info_text"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <!-- Tee -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/final_layout_player_info_text"
+                            android:text="@string/player_tee" />
+
+                        <TextView
+                            android:id="@+id/player_4_tee"
+                            style="@style/final_layout_player_info_text"
+                            android:text="X" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Return to Scorecard Button -->
+    <Button
+        android:id="@+id/back_to_scorecard"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/clear_scorecard"
+        android:onClick="backToScorecard"
+        android:text="@string/back_to_scorecard" />
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/clear_scorecard"
+        style="@style/warning_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="clearScorecard"
+        android:text="@string/clear_scorecard"
+        android:textColor="@color/White" />
 
 </RelativeLayout>
