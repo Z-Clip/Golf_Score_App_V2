@@ -1,5 +1,14 @@
-package com.example.android.golfscoreapp;
+/* This application is the intellectual property of Jonathan Leverkuhn and is not to be used without
+ * his written permission.
+ *
+ * This application, in its current state is a demo and is not intended for public distribution.
+ * St. Andrews Links has graciously authorized me to utilize their intellectual property (including
+ * images, course information, and their logo) so long as the app is not made public or misrepresented
+ * as an extension of their brand. The code below is mine (Jonathan Leverkuhn's) and was all hand-written,
+ * but the drawable and array resources contain data that does not belong to me.
+ */
 
+package com.example.android.golfscoreapp;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -172,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         changeLayoutBasedOnOrientation(newConfig);
     }
 
-    //Change layout based on screen orientation.
+    //Change layout based on screen orientation and phase.
     public void changeLayoutBasedOnOrientation(Configuration newConfig) {
         //Portrait orientation
         if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -208,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Defines variables for the objects in the initial layout and sets their properties.
     public void buildInitialObjects() {
         coursesViewGroup = findViewById(R.id.course_selection_view_group);
         playerCountViewGroup = findViewById(R.id.player_count_view_group);
@@ -246,6 +256,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*If values are already defined for player name, handicap, or tee, populate those views in
+     *the initial layout accordingly. This is mostly applicable if the user toggles back to the initial
+     * layout from the game layout.
+     */
     public void setEditTextViewText() {
         for (int i = 1; i <= playerCount; i++) {
             EditText nameView = findViewById(getResources().getIdentifier("player_" + i + "_name", "id", getPackageName()));
@@ -266,6 +280,9 @@ public class MainActivity extends AppCompatActivity {
         beginRoundViewGroup.setVisibility(View.VISIBLE);
     }
 
+    /*Executed if the user navigates back to the course selection screen. If clears all the course
+     *variables/arrays.
+     */
     public void returnToCourseSelection(View view) {
         initialViewState = 1;
         coursesViewGroup.setVisibility(View.VISIBLE);
@@ -281,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
         teeColorAry = null;
     }
 
+    //Executed when the user adds players to the player count.
     public void incrementPlayers(View view) {
         if (playerCount < 4) {
             playerCount = playerCount + 1;
@@ -303,6 +321,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Executed when the user removes players from the player count.
     public void decrementPlayers(View view) {
         if (playerCount > 1) {
             playerCount = playerCount - 1;
@@ -328,15 +347,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Executed when the player count is decremented. Clears variables for the player removed.
     public void clearPlayerInfo(int player) {
         RadioGroup teeRadioGroup = findViewById(getResources().getIdentifier("player_" + player + "_tee_group", "id", getPackageName()));
         teeRadioGroup.clearCheck();
     }
 
+    /*This is actually defined in a style resource, so it only looks like it's not called to the IDE.
+     *This is simply an attempt to add additional points at which EditText information is saved off to vars.
+     *This is important if the layout changes due to screen rotation because we don't want information
+     * that has already been entered to be lost.
+     */
     public void editTextOnClick(View view) {
         saveEditTextVars();
     }
 
+    //Gets text for the EditText views in the initial layout and saves the text to variables and/or arrays.
     public void saveEditTextVars() {
         for (int i = 1; i <= playerCount; i++) {
             EditText name = findViewById(getResources().getIdentifier("player_" + i + "_name", "id", getPackageName()));
@@ -350,6 +376,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Builds the playerTeeAry array based on the information provided in the tee views on the initial layout.
     public void setPlayerTee(View view) {
         saveEditTextVars();
         for (int i = 1; i <= playerCount; i++) {
@@ -366,6 +393,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*Prevents users from entering a handicap greater than the USGA max. Does not currently account for
+     *gender, but it will in subsequent versions.
+     * Saves off any text entered in the edit text views.
+     * Changes the layout to the game layout.
+     * Sets the phase to game and executes object variables creation and population for the game layout.
+     */
     public void beginRound(View view) {
         for (int i = 1; i <= playerCount; i++) {
             if (playerHandicapAry[i] > 36.4) {
@@ -392,6 +425,7 @@ public class MainActivity extends AppCompatActivity {
         buildGameObjects();
     }
 
+    //Sets the phase back to "initial", changes the layout to initial, and re-defines object variables for that layout.
     public void returnToPlayerInfo (View view) {
         phase = "initial";
         preserveScoreArrays = true;
@@ -400,6 +434,7 @@ public class MainActivity extends AppCompatActivity {
         buildInitialObjects();
     }
 
+    //Defines array variables for the par, distance, name, and tee color based on the array resources associated with the course.
     public void setCourseArrays() {
         Resources resource = getResources();
         courseParAry = resource.getIntArray(resource.getIdentifier(course + "_par", "array", getPackageName()));
@@ -411,6 +446,7 @@ public class MainActivity extends AppCompatActivity {
         holeCount = courseParAry.length - 1;
     }
 
+    //Sets variables associated with the various objects in the game layout.
     public void buildGameObjects() {
         gameBackgroundImageView = findViewById(R.id.game_background_image);
         gameHoleNumberView = findViewById(R.id.hole_number);
@@ -436,6 +472,7 @@ public class MainActivity extends AppCompatActivity {
         setGameObjects();
     }
 
+    //Defines values for the various views in the game layout.
     public void setGameObjects() {
         gameBackgroundImageView.setImageResource(getResources().getIdentifier("com.example.android.golfscoreapp:drawable/" + course + "_photo_hole_" + hole, null, null));
         String holeNumber = "Hole " + hole;
@@ -494,6 +531,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Increments the hole and redefines values for the various views in the game layout.
     public void incrementHole(View view) {
         if (hole < holeCount) {
             hole = hole + 1;
@@ -503,6 +541,7 @@ public class MainActivity extends AppCompatActivity {
         setGameObjects();
     }
 
+    //Decrements the hole and redefines values for the various views in the game layout.
     public void decrementHole(View view) {
         if (hole > 1) {
             hole = hole - 1;
@@ -512,28 +551,33 @@ public class MainActivity extends AppCompatActivity {
         setGameObjects();
     }
 
+    //Toggles the full size map views.
     public void fullSizeMap (View view) {
         fullSizeMap.setVisibility(View.VISIBLE);
         closeMap.setVisibility(View.VISIBLE);
     }
 
+    //"Gone-s" the full size map views.
     public void closeFullMap (View view) {
         fullSizeMap.setVisibility(View.GONE);
         closeMap.setVisibility(View.GONE);
     }
 
+    //Sets phase to final, switches to the final layout, and executes the creation of object variables.
     public void finishRound (View view) {
         phase = "final";
         setContentView(R.layout.final_layout_portrait);
         createFinalObjects();
     }
 
+    //Sets phase to game, switches to the game layout, and executes the creation of object variables.
     public void backToScorecard (View view){
         phase = "game";
         setContentView(R.layout.game_layout_portrait);
         buildGameObjects();
     }
 
+    //Sets vars for the final vews, and then populates those views dynamically.
     public void createFinalObjects () {
         switch (playerCount) {
             case 4:
@@ -628,6 +672,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Clears ALL variables and sets the view back to initial
     public void clearScorecard (View view) {
         phase = "initial";
         preserveScoreArrays = false;
@@ -659,26 +704,31 @@ public class MainActivity extends AppCompatActivity {
         buildInitialObjects();
     }
 
+    //Increments the value in the array node whose key corresponds with the current hole.
     public void player1IncrementScore(View view) {
         player1Score[hole] = player1Score[hole] + 1;
         player1ScoreView.setText(String.valueOf(player1Score[hole]));
     }
 
+    //Increments the value in the array node whose key corresponds with the current hole.
     public void player2IncrementScore(View view) {
         player2Score[hole] = player2Score[hole] + 1;
         player2ScoreView.setText(String.valueOf(player2Score[hole]));
     }
 
+    //Increments the value in the array node whose key corresponds with the current hole.
     public void player3IncrementScore(View view) {
         player3Score[hole] = player3Score[hole] + 1;
         player3ScoreView.setText(String.valueOf(player3Score[hole]));
     }
 
+    //Increments the value in the array node whose key corresponds with the current hole.
     public void player4IncrementScore(View view) {
         player4Score[hole] = player4Score[hole] + 1;
         player4ScoreView.setText(String.valueOf(player4Score[hole]));
     }
 
+    //Decrements the value in the array node whose key corresponds with the current hole.
     public void player1DecrementScore(View view) {
         if (player1Score[hole] > 0) {
             player1Score[hole] = player1Score[hole] - 1;
@@ -686,6 +736,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Decrements the value in the array node whose key corresponds with the current hole.
     public void player2DecrementScore(View view) {
         if (player2Score[hole] > 0) {
             player2Score[hole] = player2Score[hole] - 1;
@@ -693,6 +744,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Decrements the value in the array node whose key corresponds with the current hole.
     public void player3DecrementScore(View view) {
         if (player3Score[hole] > 0) {
             player3Score[hole] = player3Score[hole] - 1;
@@ -700,6 +752,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Decrements the value in the array node whose key corresponds with the current hole.
     public void player4DecrementScore(View view) {
         if (player4Score[hole] > 0) {
             player4Score[hole] = player4Score[hole] - 1;
