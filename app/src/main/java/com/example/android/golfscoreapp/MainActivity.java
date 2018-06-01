@@ -168,9 +168,6 @@ public class MainActivity extends AppCompatActivity {
             player2Score = savedInstanceState.getIntArray("player2Score");
             player3Score = savedInstanceState.getIntArray("player3Score");
             player4Score = savedInstanceState.getIntArray("player4Score");
-            if (phase.equals("initial")) {
-                buildInitialObjects();
-            }
         }
     }
 
@@ -427,7 +424,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Sets the phase back to "initial", changes the layout to initial, and re-defines object variables for that layout.
-    public void returnToPlayerInfo (View view) {
+    public void returnToPlayerInfo(View view) {
         phase = "initial";
         preserveScoreArrays = true;
         setContentView(R.layout.initial_layout_portrait);
@@ -553,33 +550,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Toggles the full size map views.
-    public void fullSizeMap (View view) {
+    public void fullSizeMap(View view) {
         fullSizeMap.setVisibility(View.VISIBLE);
         closeMap.setVisibility(View.VISIBLE);
     }
 
     //"Gone-s" the full size map views.
-    public void closeFullMap (View view) {
+    public void closeFullMap(View view) {
         fullSizeMap.setVisibility(View.GONE);
         closeMap.setVisibility(View.GONE);
     }
 
     //Sets phase to final, switches to the final layout, and executes the creation of object variables.
-    public void finishRound (View view) {
+    public void finishRound(View view) {
         phase = "final";
         setContentView(R.layout.final_layout_portrait);
         createFinalObjects();
     }
 
     //Sets phase to game, switches to the game layout, and executes the creation of object variables.
-    public void backToScorecard (View view){
+    public void backToScorecard(View view) {
         phase = "game";
         setContentView(R.layout.game_layout_portrait);
         buildGameObjects();
     }
 
     //Sets vars for the final vews, and then populates those views dynamically.
-    public void createFinalObjects () {
+    public void createFinalObjects() {
         switch (playerCount) {
             case 4:
                 finalPlayer4Info = findViewById(R.id.final_player_4_info);
@@ -587,7 +584,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer4Name = findViewById(R.id.final_player_4_name);
                 finalPlayer4Name.setText(playerNameAry[4]);
                 int parSoFar4 = 0;
-                for (int i = 1 ; i < courseParAry.length ; i++) {
+                for (int i = 1; i < courseParAry.length; i++) {
                     if (player4Score[i] > 0) {
                         parSoFar4 = parSoFar4 + courseParAry[i];
                     }
@@ -596,7 +593,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer4ParSoFar.setText(String.valueOf(parSoFar4));
                 finalPlayer4StrokeCount = findViewById(R.id.player_4_stroke_count);
                 int strokes4 = 0;
-                for (int i = 1 ; i < player4Score.length ; i++) {
+                for (int i = 1; i < player4Score.length; i++) {
                     strokes4 = player4Score[i] + strokes4;
                 }
                 finalPlayer4StrokeCount.setText(String.valueOf(strokes4));
@@ -609,7 +606,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer3Name = findViewById(R.id.final_player_3_name);
                 finalPlayer3Name.setText(playerNameAry[3]);
                 int parSoFar3 = 0;
-                for (int i = 1 ; i < courseParAry.length ; i++) {
+                for (int i = 1; i < courseParAry.length; i++) {
                     if (player3Score[i] > 0) {
                         parSoFar3 = parSoFar3 + courseParAry[i];
                     }
@@ -618,7 +615,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer3ParSoFar.setText(String.valueOf(parSoFar3));
                 finalPlayer3StrokeCount = findViewById(R.id.player_3_stroke_count);
                 int strokes3 = 0;
-                for (int i = 1 ; i < player3Score.length ; i++) {
+                for (int i = 1; i < player3Score.length; i++) {
                     strokes3 = player3Score[i] + strokes3;
                 }
                 finalPlayer3StrokeCount.setText(String.valueOf(strokes3));
@@ -631,7 +628,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer2Name = findViewById(R.id.final_player_2_name);
                 finalPlayer2Name.setText(playerNameAry[2]);
                 int parSoFar2 = 0;
-                for (int i = 1 ; i < courseParAry.length ; i++) {
+                for (int i = 1; i < courseParAry.length; i++) {
                     if (player2Score[i] > 0) {
                         parSoFar2 = parSoFar2 + courseParAry[i];
                     }
@@ -640,7 +637,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer2ParSoFar.setText(String.valueOf(parSoFar2));
                 finalPlayer2StrokeCount = findViewById(R.id.player_2_stroke_count);
                 int strokes2 = 0;
-                for (int i = 1 ; i < player2Score.length ; i++) {
+                for (int i = 1; i < player2Score.length; i++) {
                     strokes2 = player2Score[i] + strokes2;
                 }
                 finalPlayer2StrokeCount.setText(String.valueOf(strokes2));
@@ -653,7 +650,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer1Name = findViewById(R.id.final_player_1_name);
                 finalPlayer1Name.setText(playerNameAry[1]);
                 int parSoFar1 = 0;
-                for (int i = 1 ; i < courseParAry.length ; i++) {
+                for (int i = 1; i < courseParAry.length; i++) {
                     if (player1Score[i] > 0) {
                         parSoFar1 = parSoFar1 + courseParAry[i];
                     }
@@ -662,7 +659,7 @@ public class MainActivity extends AppCompatActivity {
                 finalPlayer1ParSoFar.setText(String.valueOf(parSoFar1));
                 finalPlayer1StrokeCount = findViewById(R.id.player_1_stroke_count);
                 int strokes1 = 0;
-                for (int i = 1 ; i < player1Score.length ; i++) {
+                for (int i = 1; i < player1Score.length; i++) {
                     strokes1 = player1Score[i] + strokes1;
                 }
                 finalPlayer1StrokeCount.setText(String.valueOf(strokes1));
@@ -674,20 +671,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Clears ALL variables and sets the view back to initial
-    public void clearScorecard (View view) {
+    public void clearScorecard(View view) {
         phase = "initial";
         preserveScoreArrays = false;
         initialViewState = 1;
         hole = 1;
         course = null;
         playerCount = 1;
-        for (int i = 1 ; i <= 4 ; i++) {
+        for (int i = 1; i <= 4; i++) {
             playerTeeAry[i] = 2;
         }
-        for (int i = 1 ; i <= 4 ; i++) {
+        for (int i = 1; i <= 4; i++) {
             playerNameAry[i] = "Player " + i;
         }
-        for (int i = 0 ; i <= 4 ; i++) {
+        for (int i = 0; i <= 4; i++) {
             playerHandicapAry[i] = 0;
         }
         courseParAry = null;
